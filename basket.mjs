@@ -248,19 +248,27 @@ const hucreler = tr => [...tr.matchAll(/<td[^>]*>([\s\S]*?)<\/td>/gi)].map(m => 
 const tabloAl = (html, desen) => { const i = html.search(desen); if (i < 0) return ''; const j = html.indexOf('</table>', i); return j < 0 ? '' : html.slice(i, j); };
 
 // <table class="tbl-period-scores">: her hücrede periyot skoru + kümülatif skor
-function periyotHtml(html, s) {
+function periyotHtml(html) {
   const t = tabloAl(html, /<table[^>]*class="tbl-period-scores"/i);
   if (!t) return null;
   const takim = satirlar(t).map(tr => hucreler(tr).filter(c => !/team-name/.test(c)).map(c => {
     const kum = (c.match(/cumilative-period-scores[^>]*>\s*(\d{1,3})/i) || [])[1];
     const per = hucreMetin(c.replace(/<span[^>]*period-name[^>]*>[\s\S]*?<\/span>/gi, '').replace(/<span[^>]*cumilative[\s\S]*?<\/span>/gi, ''));
-    return [+per, +kum];
-  }).filter(x => !isNaN(x[0]) && !isNaN(x[1])));
+    return [/^\d{1,3}$/.test(per) ? +per : NaN, kum === undefined ? null : +kum];
+  }).filter(x => !isNaN(x[0])));
   const tr = takim.filter(x => x.length >= 4);
   if (tr.length < 2) return null;
   const [ev, dep] = tr;
-  if (ev.length !== dep.length || !kumTamam(ev, s[0]) || !kumTamam(dep, s[1])) return null;
+  // Kümülatif skor yazılı olan hücrelerde toplam tutmalı
+  const tutarli = c => { let t = 0; return c.every(([p, k]) => (t += p, k === null || k === t)); };
+  if (ev.length !== dep.length || !tutarli(ev) || !tutarli(dep)) return null;
   return ev.map((e, i) => [e[0], dep[i][0]]);
+}
+// Sayfanın üstündeki skor bloğu: "Tarih : ... İç Saha MS 74 - 57 İY : 49 - 27"
+function sayfaSkor(duz) {
+  const i = duz.indexOf('Tarih :');
+  const m = (i >= 0 ? duz.slice(i, i + 400) : '').match(/\bMS\s+(\d{1,3})\s*-\s*(\d{1,3})\b/);
+  return m ? m[1] + '-' + m[2] : '';
 }
 
 // Kutu skor: #tblHomeStats / #tblAwayStats tablolarının takım toplamı satırı (oyuncular alınmaz)
@@ -291,7 +299,7 @@ function kutuSkor(html) {
 function periyotBul(html, duz, ev, dep, ms) {
   const s = skorCoz(ms);
   if (!s) return null;
-  const h = periyotHtml(html, s);
+  const h = periyotHtml(html);
   if (h) return h;
   const tablo = periyotTablo(duz, s);
   if (tablo) return tablo;
@@ -345,9 +353,12 @@ function macAyristir(html, a) {
     const h = r.oran[ad] || (r.oran[ad] = {});
     et.forEach((e, i) => { if (or[i]) h[e.trim()] = or[i]; });
   }
-  if (r.ms) r.per = periyotBul(html, duz, r.ev, r.dep, r.ms);
-  // Uzatmalı maçta skor uzatma dahil hâline getirilir (iddaa basketbol sonuçları uzatma dahildir)
-  if (r.per && r.per.length > 4) r.ms = topla(r.per.map(x => x[0])) + '-' + topla(r.per.map(x => x[1]));
+  const sayfa = sayfaSkor(duz);
+  if (sayfa && sayfa !== '0-0') r.ms = sayfa;
+  r.per = periyotHtml(html) || (r.ms ? periyotBul(html, duz, r.ev, r.dep, r.ms) : null);
+  // Periyot toplamı esas skor sayılır (uzatma dahil — iddaa basketbol sonuçları uzatma dahildir)
+  if (r.per) r.ms = topla(r.per.map(x => x[0])) + '-' + topla(r.per.map(x => x[1]));
+  if (r.ms === '0-0') r.ms = '';
   r.ist = kutuSkor(html);
   return r;
 }
@@ -445,6 +456,7 @@ const say = { yeni: 0, guncellenen: 0, ayni: 0, periyotlu: 0, istatistikli: 0, m
 const tamam = r => r && Array.isArray(r.per) && r.per.length >= 4;
 const tamIst = r => tamam(r) && r.ist;
 const karsilastir = r => JSON.stringify({ ...r, guncel: 0 });
+const SURUM = 2;   // kayıt biçimi sürümü; eski sürümde periyotu eksik kalan maçlar yeniden çekilir
 
 async function havuz(isler, fn) {
   let i = 0;
@@ -469,7 +481,7 @@ async function macIsle(a, tarih) {
   const eski = g[a.id];
   const yeni = {
     id: a.id, mbs: r.mbs, tarih, saat: r.saat, lig: a.lig, ligHam: a.ligHam,
-    ev: r.ev, dep: r.dep, iy: r.iy, ms: r.ms, per: r.per, ist: r.ist, kod: r.kod, oran: r.oran,
+    ev: r.ev, dep: r.dep, iy: r.iy, ms: r.ms, per: r.per, ist: r.ist, kod: r.kod, oran: r.oran, surum: SURUM,
     guncel: new Date().toISOString()
   };
   if (tamam(yeni)) say.periyotlu++;
@@ -486,7 +498,8 @@ async function gunIsle(tarih, durum, sadeceEksik) {
   const g = await gunYukle(tarih);
   kirli.add(tarih);   // liste alındıysa gün dosyası (boş olsa bile) yazılır
   const taze = r => r && Date.now() - Date.parse(r.guncel || 0) < 12 * 3600e3;
-  const isler = liste.filter(a => sadeceEksik ? !(tamIst(g[a.id]) || taze(g[a.id])) : !g[a.id]);
+  const eski = r => r && !tamam(r) && (r.surum || 1) < SURUM;
+  const isler = liste.filter(a => sadeceEksik ? !(tamIst(g[a.id]) || taze(g[a.id])) : (!g[a.id] || eski(g[a.id])));
   const once = { ...say }, bas = Date.now();
   let hatali = [];
   await havuz(isler, async a => { if (await macIsle(a, tarih) === false) hatali.push(a); });
