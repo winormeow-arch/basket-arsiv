@@ -220,12 +220,14 @@ function diziCoz(n, hedef) {
   return null;
 }
 // [periyot, kümülatif] çiftleri tutarlı mı ve son kümülatif skora eşit mi
-const kumTamam = (c, hedef) => c.length >= 4 && c.every((x, i) => x[1] === (i ? c[i - 1][1] : 0) + x[0]) && c[c.length - 1][1] === hedef;
+// Skor listede normal süre skoru olarak da gelebilir (uzatmalı maçlarda): 4. periyot sonu da kabul
+const kumTamam = (c, hedef) => c.length >= 4 && c.every((x, i) => x[1] === (i ? c[i - 1][1] : 0) + x[0]) &&
+  (c[c.length - 1][1] === hedef || c[3][1] === hedef);
 function periyotTablo(duz, s) {
   const bas = /(?:^|\s)1P\s+\d{1,3}\s+\d{1,3}/g;
   let m;
   while ((m = bas.exec(duz))) {
-    const z = /\s*(?:[1-9]P|UZT?|U|OT)\s+(\d{1,3})\s+(\d{1,3})(?=\s|$)/y;
+    const z = /\s*(?:[1-9]P|\d?U[ZT]*\d?|OT\d?|Uzatma\s*\d?)\s+(\d{1,3})\s+(\d{1,3})(?=\s|$)/iy;
     z.lastIndex = m.index;
     const ev = [];
     let son = m.index, x;
@@ -240,9 +242,57 @@ function periyotTablo(duz, s) {
   }
   return null;
 }
+const hucreMetin = c => entity(c.replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ').trim();
+const satirlar = t => [...t.matchAll(/<tr[\s\S]*?<\/tr>/gi)].map(m => m[0]);
+const hucreler = tr => [...tr.matchAll(/<td[^>]*>([\s\S]*?)<\/td>/gi)].map(m => m[1]);
+const tabloAl = (html, desen) => { const i = html.search(desen); if (i < 0) return ''; const j = html.indexOf('</table>', i); return j < 0 ? '' : html.slice(i, j); };
+
+// <table class="tbl-period-scores">: her hücrede periyot skoru + kümülatif skor
+function periyotHtml(html, s) {
+  const t = tabloAl(html, /<table[^>]*class="tbl-period-scores"/i);
+  if (!t) return null;
+  const takim = satirlar(t).map(tr => hucreler(tr).filter(c => !/team-name/.test(c)).map(c => {
+    const kum = (c.match(/cumilative-period-scores[^>]*>\s*(\d{1,3})/i) || [])[1];
+    const per = hucreMetin(c.replace(/<span[^>]*period-name[^>]*>[\s\S]*?<\/span>/gi, '').replace(/<span[^>]*cumilative[\s\S]*?<\/span>/gi, ''));
+    return [+per, +kum];
+  }).filter(x => !isNaN(x[0]) && !isNaN(x[1])));
+  const tr = takim.filter(x => x.length >= 4);
+  if (tr.length < 2) return null;
+  const [ev, dep] = tr;
+  if (ev.length !== dep.length || !kumTamam(ev, s[0]) || !kumTamam(dep, s[1])) return null;
+  return ev.map((e, i) => [e[0], dep[i][0]]);
+}
+
+// Kutu skor: #tblHomeStats / #tblAwayStats tablolarının takım toplamı satırı (oyuncular alınmaz)
+const KUTU = { 'Sa.': 'Sayı', 'Rbd': 'Ribaund', 'Ast': 'Asist', '2S': '2 Sayı', '3S': '3 Sayı', 'SA': 'Serbest Atış',
+  'RH': 'Hücum Ribaundu', 'RS': 'Savunma Ribaundu', 'Fa': 'Faul', 'Bl': 'Blok', 'TÇ': 'Top Çalma', 'TK': 'Top Kaybı' };
+function kutuTakim(html, id) {
+  const t = tabloAl(html, new RegExp(`<table[^>]*id="${id}"`, 'i'));
+  if (!t) return null;
+  const tr = satirlar(t);
+  const bas = tr.find(x => /table-header/.test(x));
+  const top = tr.find(x => /total_row/.test(x));
+  if (!bas || !top) return null;
+  const b = hucreler(bas).map(hucreMetin), v = hucreler(top).map(hucreMetin);
+  const o = {};
+  b.forEach((h, i) => {
+    const ad = KUTU[h]; if (!ad || !v[i]) return;
+    const m = v[i].match(/^(\d+)\s*\/\s*(\d+)$/);
+    if (m) o[ad] = [+m[1], +m[2]];
+    else if (/^\d+$/.test(v[i])) o[ad] = +v[i];
+  });
+  return Object.keys(o).length >= 3 ? o : null;
+}
+function kutuSkor(html) {
+  const ev = kutuTakim(html, 'tblHomeStats'), dep = kutuTakim(html, 'tblAwayStats');
+  return ev && dep ? { ev, dep } : null;
+}
+
 function periyotBul(html, duz, ev, dep, ms) {
   const s = skorCoz(ms);
   if (!s) return null;
+  const h = periyotHtml(html, s);
+  if (h) return h;
   const tablo = periyotTablo(duz, s);
   if (tablo) return tablo;
   const t = tokenlar(html);
@@ -296,6 +346,9 @@ function macAyristir(html, a) {
     et.forEach((e, i) => { if (or[i]) h[e.trim()] = or[i]; });
   }
   if (r.ms) r.per = periyotBul(html, duz, r.ev, r.dep, r.ms);
+  // Uzatmalı maçta skor uzatma dahil hâline getirilir (iddaa basketbol sonuçları uzatma dahildir)
+  if (r.per && r.per.length > 4) r.ms = topla(r.per.map(x => x[0])) + '-' + topla(r.per.map(x => x[1]));
+  r.ist = kutuSkor(html);
   return r;
 }
 
@@ -388,8 +441,9 @@ const dosyaVar = async t => { try { await fs.stat(gunDosya(t)); return true; } c
 /* ==================================================================
    6) İşleme
    ================================================================== */
-const say = { yeni: 0, guncellenen: 0, ayni: 0, periyotlu: 0, mbsli: 0, oransiz: 0, oynanmamis: 0, hata: 0 };
+const say = { yeni: 0, guncellenen: 0, ayni: 0, periyotlu: 0, istatistikli: 0, mbsli: 0, oransiz: 0, oynanmamis: 0, hata: 0 };
 const tamam = r => r && Array.isArray(r.per) && r.per.length >= 4;
+const tamIst = r => tamam(r) && r.ist;
 const karsilastir = r => JSON.stringify({ ...r, guncel: 0 });
 
 async function havuz(isler, fn) {
@@ -409,15 +463,17 @@ async function macIsle(a, tarih) {
   if (!html) return false;
   const r = macAyristir(html, a);
   if (!r.ms) { say.oynanmamis++; return; }
-  if (!Object.keys(r.oran).length) { say.oransiz++; return; }
+  // Sadece "-" olan (hiç oynanamayan) marketler oran sayılmaz
+  if (!Object.values(r.oran).some(e => Object.values(e).some(v => nf(v) > 1))) { say.oransiz++; return; }
   const g = await gunYukle(tarih);
   const eski = g[a.id];
   const yeni = {
     id: a.id, mbs: r.mbs, tarih, saat: r.saat, lig: a.lig, ligHam: a.ligHam,
-    ev: r.ev, dep: r.dep, iy: r.iy, ms: r.ms, per: r.per, kod: r.kod, oran: r.oran,
+    ev: r.ev, dep: r.dep, iy: r.iy, ms: r.ms, per: r.per, ist: r.ist, kod: r.kod, oran: r.oran,
     guncel: new Date().toISOString()
   };
   if (tamam(yeni)) say.periyotlu++;
+  if (yeni.ist) say.istatistikli++;
   if (r.mbs) say.mbsli++;
   if (eski && karsilastir(eski) === karsilastir(yeni)) { say.ayni++; return; }
   g[a.id] = yeni;
@@ -430,7 +486,7 @@ async function gunIsle(tarih, durum, sadeceEksik) {
   const g = await gunYukle(tarih);
   kirli.add(tarih);   // liste alındıysa gün dosyası (boş olsa bile) yazılır
   const taze = r => r && Date.now() - Date.parse(r.guncel || 0) < 12 * 3600e3;
-  const isler = liste.filter(a => sadeceEksik ? !(tamam(g[a.id]) || taze(g[a.id])) : !g[a.id]);
+  const isler = liste.filter(a => sadeceEksik ? !(tamIst(g[a.id]) || taze(g[a.id])) : !g[a.id]);
   const once = { ...say }, bas = Date.now();
   let hatali = [];
   await havuz(isler, async a => { if (await macIsle(a, tarih) === false) hatali.push(a); });
@@ -444,7 +500,7 @@ async function gunIsle(tarih, durum, sadeceEksik) {
   const f = k => say[k] - once[k];
   const sn = (Date.now() - bas) / 1000;
   console.log(`${trTarih(tarih)} · listede ${liste.length} · işlenen ${isler.length} → +${f('yeni')} yeni, ${f('guncellenen')} güncel, ` +
-    `${f('periyotlu')} periyotlu, ${f('mbsli')} MBS, ${f('oransiz')} oransız, ${f('oynanmamis')} oynanmamış, ${f('hata')} hata` +
+    `${f('periyotlu')} periyotlu, ${f('istatistikli')} ist., ${f('mbsli')} MBS, ${f('oransiz')} oransız, ${f('oynanmamis')} oynanmamış, ${f('hata')} hata` +
     (isler.length ? ` · ${(isler.length / Math.max(sn, 0.1)).toFixed(1)} maç/sn` : '') + ` · ${aktif} paralel`);
   return !zamanBitti() && !engel;
 }
@@ -454,7 +510,7 @@ async function ozetYaz(satirlar) {
   console.log(metin);
   if (process.env.GITHUB_STEP_SUMMARY) await fs.appendFile(process.env.GITHUB_STEP_SUMMARY, metin + '\n');
 }
-const sayOzet = () => `- Eklenen **${say.yeni}** · güncellenen ${say.guncellenen} · değişmeyen ${say.ayni} · periyotlu ${say.periyotlu} · MBS'li ${say.mbsli}\n` +
+const sayOzet = () => `- Eklenen **${say.yeni}** · güncellenen ${say.guncellenen} · değişmeyen ${say.ayni} · periyotlu ${say.periyotlu} · istatistikli ${say.istatistikli} · MBS'li ${say.mbsli}\n` +
   `- Oransız ${say.oransiz} · oynanmamış ${say.oynanmamis} · hata ${say.hata} · istek ${istekSay}`;
 
 /* ---------- güncel ---------- */
@@ -570,6 +626,8 @@ const csvD = (v, sayiMi) => {
   if (sayiMi && /^-?\d+([.,]\d+)?$/.test(s)) s = s.replace('.', ',');
   return '"' + s.replace(/"/g, '""') + '"';
 };
+const IST_SUTUN = [['Ribaund'], ['Hücum Ribaundu'], ['Savunma Ribaundu'], ['Asist'], ['2 Sayı', 1], ['3 Sayı', 1],
+  ['Serbest Atış', 1], ['Faul'], ['Blok'], ['Top Çalma'], ['Top Kaybı']];
 const BASLIK = [
   'MBS', 'Tarih', 'Saat', 'Lig', 'Ev Sahibi', 'Deplasman',
   'P1 Ev', 'P1 Dep', 'P2 Ev', 'P2 Dep', 'P3 Ev', 'P3 Dep', 'P4 Ev', 'P4 Dep', 'Uzatma Ev', 'Uzatma Dep',
@@ -577,6 +635,10 @@ const BASLIK = [
   'MS 1', 'MS X', 'MS 2', 'AÜ Çizgi', 'AÜ Alt', 'AÜ Üst', 'AÜ ✓',
   'HND Ev Handikap', 'HND 1', 'HND 2', 'İY AÜ Çizgi', 'İY AÜ Alt', 'İY AÜ Üst',
   'Beklenen P1 (Çizgi/4)', 'P1 Sapma %', 'Hız Projeksiyonu', 'Normal Süre − Projeksiyon', 'Toplam − Çizgi',
+  'P1 Sonuç', 'P2 Sonuç', 'P3 Sonuç', 'P4 Sonuç',
+  ...IST_SUTUN.flatMap(([ad, cift]) => cift
+    ? [`${ad} İsabet Ev`, `${ad} Deneme Ev`, `${ad} İsabet Dep`, `${ad} Deneme Dep`]
+    : [`${ad} Ev`, `${ad} Dep`]),
   'İddaa Kodu', 'Tüm Oranlar'
 ];
 const csvBaslik = () => '\uFEFFsep=;\r\n' + BASLIK.map(b => csvD(b)).join(';') + '\r\n';
@@ -610,6 +672,11 @@ function csvSatir(r) {
     csvD(proj === '' ? '' : yuv(proj), true),
     csvD(proj !== '' && normal !== '' ? yuv(normal - proj) : '', true),
     csvD(au && t ? yuv(toplam - au.cizgi) : '', true),
+    ...[0, 1, 2, 3].map(i => csvD(p[i] ? (p[i][0] > p[i][1] ? '1' : p[i][0] < p[i][1] ? '2' : 'X') : '')),
+    ...IST_SUTUN.flatMap(([ad, cift]) => {
+      const e = r.ist?.ev?.[ad], d = r.ist?.dep?.[ad];
+      return (cift ? [e?.[0], e?.[1], d?.[0], d?.[1]] : [e, d]).map(v => csvD(v ?? '', true));
+    }),
     csvD(r.kod), csvD(tumu)
   ];
   return [...metin, ...sayilar, ...orta].join(';') + '\r\n';
@@ -621,7 +688,7 @@ async function csvHepsi() {
   await fs.mkdir(CIKTI, { recursive: true });
   const tumF = path.join(CIKTI, 'basket_tum.csv');
   await fs.writeFile(tumF, csvBaslik());
-  let toplam = 0, periyotlu = 0;
+  let toplam = 0, periyotlu = 0, istli = 0;
   for (const y of (await fs.readdir(kok).catch(() => [])).filter(x => /^\d{4}$/.test(x)).sort()) {
     const yF = path.join(CIKTI, `basket_${y}.csv`);
     await fs.writeFile(yF, csvBaslik());
@@ -630,10 +697,10 @@ async function csvHepsi() {
         const maclar = Object.values(JSON.parse(await fs.readFile(path.join(kok, y, m, f), 'utf8')));
         const parca = maclar.map(csvSatir).join('');
         await fs.appendFile(yF, parca); await fs.appendFile(tumF, parca);
-        toplam += maclar.length; periyotlu += maclar.filter(tamam).length;
+        toplam += maclar.length; periyotlu += maclar.filter(tamam).length; istli += maclar.filter(r => r.ist).length;
       }
   }
-  await ozetYaz(['## Basketbol CSV', `- ${toplam} maç yazıldı · periyot skoru olan ${periyotlu}`]);
+  await ozetYaz(['## Basketbol CSV', `- ${toplam} maç yazıldı · periyot skoru olan ${periyotlu} · istatistikli ${istli}`]);
 }
 
 /* ==================================================================
@@ -681,10 +748,11 @@ async function testCalis() {
       const k = { aday: a, deneme };
       if (html) {
         const r = macAyristir(html, a);
-        Object.assign(k, { ms: r.ms, per: r.per, mbs: r.mbs, marketler: Object.keys(r.oran), oran: r.oran,
+        Object.assign(k, { ms: r.ms, per: r.per, ist: r.ist, mbs: r.mbs, marketler: Object.keys(r.oran), oran: r.oran,
           anaAU: anaAU(r.oran), iyAU: iyAU(r.oran), msOran: msOran(r.oran), handikap: handikap(r.oran) });
-        const i = html.search(/periyot|çeyrek|ceyrek|quarter/i);
-        k.periyotIzi = i >= 0 ? html.slice(Math.max(0, i - 300), i + 1500).replace(/\s+/g, ' ') : '';
+        const duz = entity(html.replace(/<script[\s\S]*?<\/script>/gi, ' ').replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ');
+        const i = duz.search(/\s1P\s/);
+        k.periyotMetni = i >= 0 ? duz.slice(Math.max(0, i - 120), i + 300) : '';
         if (kayit < 3) { await fs.writeFile(path.join(DEBUG, `mac-${a.id}.html`), html); kayit++; }
       }
       rapor.maclar.push(k);
@@ -694,7 +762,7 @@ async function testCalis() {
   const acilan = rapor.maclar.filter(m => m.ms);
   await ozetYaz(['## Basketbol test',
     `- Listede bulunan basketbol maçı (günlere göre): ${rapor.listeler.filter(l => l.ek === LISTE_EK).map(l => l.basket ?? 'hata').join(' / ')}`,
-    `- Sayfası açılan: ${acilan.length}/${rapor.maclar.length} · periyotu çözülen: ${acilan.filter(m => m.per).length} · ana alt/üst bulunan: ${acilan.filter(m => m.anaAU).length}`,
+    `- Sayfası açılan: ${acilan.length}/${rapor.maclar.length} · periyotu çözülen: ${acilan.filter(m => m.per).length} · istatistiği çözülen: ${acilan.filter(m => m.ist).length} · ana alt/üst bulunan: ${acilan.filter(m => m.anaAU).length}`,
     rapor.hata ? `- HATA: ${rapor.hata}` : '']);
 }
 
