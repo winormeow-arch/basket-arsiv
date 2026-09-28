@@ -1,19 +1,17 @@
 name: Basketbol arşiv
 
-# Zamanlanmış çalışmalar test sonucu doğrulanana kadar KAPALI.
-# Test tamam olunca aşağıdaki schedule bloğunun başındaki # işaretleri kaldırılacak.
 on:
-  # schedule:
-  #   - cron: '41 * * * *'       # güncel: her saat son günler
-  #   - cron: '19 1-23/6 * * *'  # geçmiş: 6 saatte bir
-  #   - cron: '15 3 * * *'       # CSV: her gece
+  schedule:
+    - cron: '41 * * * *'       # güncel: her saat son günler
+    - cron: '19 1-23/6 * * *'  # geçmiş: 6 saatte bir (bittiyse hemen kapanır)
+    - cron: '15 3 * * *'       # CSV: her gece
   workflow_dispatch:
     inputs:
       mod:
-        description: 'test (ilk önce bunu çalıştır) · gecmis · guncel · csv'
+        description: 'gecmis (5 yıllık taramayı başlat/devam) · guncel · test · csv'
         type: choice
-        default: test
-        options: [test, gecmis, guncel, csv]
+        default: gecmis
+        options: [gecmis, guncel, test, csv]
 
 permissions:
   contents: write
