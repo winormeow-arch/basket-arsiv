@@ -1,46 +1,149 @@
-name: Avrupa oranları
+name: Basketbol arşiv
 
+# Zamanlanmış çalışmalar test sonucu doğrulanana kadar KAPALI.
+# Test tamam olunca aşağıdaki schedule bloğunun başındaki # işaretleri kaldırılacak.
 on:
-  schedule:
-    - cron: "0 6 * * *"    # 09:00 TSİ: tüm şirketler
-    - cron: "0 15 * * *"   # 18:00 TSİ: sadece keskin şirketler
+  # schedule:
+  #   - cron: '41 * * * *'       # güncel: her saat son günler
+  #   - cron: '19 1-23/6 * * *'  # geçmiş: 6 saatte bir
+  #   - cron: '15 3 * * *'       # CSV: her gece
   workflow_dispatch:
     inputs:
       mod:
-        description: "kesif = listeleri indir, sabah = tüm şirketler, aksam = keskin şirketler"
+        description: 'test (ilk önce bunu çalıştır) · gecmis · guncel · csv'
         type: choice
-        options: [kesif, sabah, aksam]
-        default: kesif
+        default: test
+        options: [test, gecmis, guncel, csv]
 
 permissions:
   contents: write
 
-concurrency:
-  group: avrupa-oranlar
-  cancel-in-progress: false
+env:
+  YIL: '5'
+  ANKRAJ: '2026-09-27'
+  PARCA_SAYI: '6'
+  SPOR_ALAN: '23'     # test raporuna göre düzeltilecek
+  SPOR_DEGER: '2'
+  LISTE_EK: ''
+  MAC_YOL: ''
 
 jobs:
-  topla:
+  test:
+    if: inputs.mod == 'test'
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-      - name: Oranları çek
-        env:
-          ODDSPAPI_KEY: ${{ secrets.ODDSPAPI_KEY }}
-          MOD: ${{ github.event.inputs.mod || (github.event.schedule == '0 15 * * *' && 'aksam' || 'sabah') }}
-        run: python scripts/avrupa_oranlar.py "$MOD"
-      - name: Depoya kaydet
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - name: Basketbol testi
+        env: { MOD: test }
+        run: node basket.mjs
+      - name: Raporu GitHub'a kaydet
         run: |
-          git config user.name "avrupa-oranlar-bot"
-          git config user.email "actions@users.noreply.github.com"
-          git add avrupa
-          git commit -m "Avrupa oranları $(TZ=Europe/Istanbul date '+%Y-%m-%d %H:%M')" || exit 0
-          for i in 1 2 3 4 5; do
-            git pull --rebase && git push && exit 0
-            sleep $((i * 5))
+          git config user.name "github-actions[bot]"
+          git config user.email "41898341+github-actions[bot]@users.noreply.github.com"
+          git add -A debug || true
+          git diff --cached --quiet && { echo "Değişiklik yok"; exit 0; }
+          git commit -q -m "test: $(date -u +'%Y-%m-%d %H:%M') UTC"
+          for n in 1 2 3 4 5 6; do
+            if git pull -q --rebase -X theirs && git push -q; then exit 0; fi
+            git rebase --abort 2>/dev/null || true
+            sleep $((RANDOM % 20 + 5))
           done
           exit 1
+
+  guncel:
+    if: github.event.schedule == '41 * * * *' || inputs.mod == 'guncel'
+    runs-on: ubuntu-latest
+    timeout-minutes: 58
+    concurrency: { group: basket-guncel, cancel-in-progress: false }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - name: Veri çek
+        env:
+          MOD: guncel
+          BUTCE_DK: '45'
+          PARALEL: '4'
+          BEKLE: '150'
+        run: node basket.mjs
+      - name: GitHub'a kaydet
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898341+github-actions[bot]@users.noreply.github.com"
+          git add -A data || true
+          git diff --cached --quiet && { echo "Değişiklik yok"; exit 0; }
+          git commit -q -m "güncel: $(date -u +'%Y-%m-%d %H:%M') UTC"
+          for n in 1 2 3 4 5 6; do
+            if git pull -q --rebase -X theirs && git push -q; then exit 0; fi
+            git rebase --abort 2>/dev/null || true
+            sleep $((RANDOM % 20 + 5))
+          done
+          exit 1
+
+  gecmis:
+    if: github.event.schedule == '19 1-23/6 * * *' || inputs.mod == 'gecmis'
+    runs-on: ubuntu-latest
+    timeout-minutes: 355
+    strategy:
+      fail-fast: false
+      matrix:
+        parca: [0, 1, 2, 3, 4, 5]
+    concurrency: { group: 'basket-gecmis-${{ matrix.parca }}', cancel-in-progress: false }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - name: Geçmişi tara (parça ${{ matrix.parca }})
+        env:
+          MOD: gecmis
+          PARCA: ${{ matrix.parca }}
+          BUTCE_DK: '25'
+          PARALEL: '4'
+          BEKLE: '150'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898341+github-actions[bot]@users.noreply.github.com"
+          kaydet() {
+            git add -A data || true
+            git diff --cached --quiet && return 0
+            git commit -q -m "geçmiş $((PARCA+1))/$PARCA_SAYI: $(date -u +'%Y-%m-%d %H:%M') UTC"
+            for n in 1 2 3 4 5 6 7 8; do
+              if git pull -q --rebase -X theirs && git push -q; then return 0; fi
+              git rebase --abort 2>/dev/null || true
+              sleep $((RANDOM % 30 + 5))
+            done
+            echo "push başarısız"; return 0
+          }
+          hata=0
+          while [ $SECONDS -lt 18600 ]; do
+            git pull -q --rebase -X theirs || git rebase --abort 2>/dev/null || true
+            if ! node basket.mjs; then hata=$((hata+1)); fi
+            kaydet
+            [ -f .bitti ] && { echo "Bu parça tamamlandı."; break; }
+            [ -f .engel ] && { echo "Mackolik hata veriyor, sonraki turda devam."; break; }
+            [ $hata -ge 3 ] && break
+          done
+
+  csv:
+    if: github.event.schedule == '15 3 * * *' || inputs.mod == 'csv'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    concurrency: { group: basket-csv, cancel-in-progress: true }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - name: CSV üret
+        env: { MOD: csv }
+        run: node --max-old-space-size=6000 basket.mjs
+      - name: Releases'e yükle
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cd cikti
+          zip -q -9 basket_tum.zip basket_tum.csv && rm basket_tum.csv
+          gh release view veri >/dev/null 2>&1 || gh release create veri --title "Basketbol veri (otomatik)" --notes "Her gece güncellenir. basket_tum.zip = bütün maçlar (içinde CSV); yıllık CSV'ler ayrıca."
+          gh release upload veri *.csv basket_tum.zip --clobber
