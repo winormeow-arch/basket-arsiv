@@ -175,8 +175,13 @@ async function gunListesi(tarih, durum) {
 /* ==================================================================
    3) Maç sayfası → oranlar + periyot skorları + MBS
    ================================================================== */
-const MAC_YOL = [process.env.MAC_YOL, '/Basketbol/Mac/Default.aspx?id=', '/Basket/Match/Default.aspx?id=', '/Match/Default.aspx?id=']
-  .filter((v, i, a) => v && a.indexOf(v) === i);
+// Basketbol maç sayfası: /Basket-Mac/{id}/{Ev-Dep}
+const slug = s => sade(s).replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+const MAC_YOL = [
+  a => `/Basket-Mac/${a.id}/${slug(a.ev + ' ' + a.dep) || 'mac'}`,
+  a => `/Basket-Mac/${a.id}`,
+  a => `/Basket-Mac/${a.id}/mac`
+];
 let yolSira = 0;
 
 // Sayfa gerçekten bu maça mı ait? (aynı id başka spordan bir maça denk gelebilir)
@@ -190,7 +195,7 @@ async function macGetir(a) {
   for (let n = 0; n < MAC_YOL.length; n++) {
     const k = (yolSira + n) % MAC_YOL.length;
     let html;
-    try { html = await getir(BASE + MAC_YOL[k] + a.id, 2, 10000); }
+    try { html = await getir(BASE + MAC_YOL[k](a), 2, 10000); }
     catch (e) { if (e instanceof KaliciHata) continue; return null; }
     if (sayfaUygun(html, a)) { yolSira = k; return html; }
   }
@@ -214,9 +219,32 @@ function diziCoz(n, hedef) {
   }
   return null;
 }
+// [periyot, kümülatif] çiftleri tutarlı mı ve son kümülatif skora eşit mi
+const kumTamam = (c, hedef) => c.length >= 4 && c.every((x, i) => x[1] === (i ? c[i - 1][1] : 0) + x[0]) && c[c.length - 1][1] === hedef;
+function periyotTablo(duz, s) {
+  const bas = /(?:^|\s)1P\s+\d{1,3}\s+\d{1,3}/g;
+  let m;
+  while ((m = bas.exec(duz))) {
+    const z = /\s*(?:[1-9]P|UZT?|U|OT)\s+(\d{1,3})\s+(\d{1,3})(?=\s|$)/y;
+    z.lastIndex = m.index;
+    const ev = [];
+    let son = m.index, x;
+    while ((x = z.exec(duz))) { ev.push([+x[1], +x[2]]); son = z.lastIndex; }
+    if (!kumTamam(ev, s[0])) continue;
+    const n = (duz.slice(son, son + 400).match(/\d{1,3}/g) || []).map(Number);
+    const k = ev.length;
+    for (let o = 0; o + 2 * k <= n.length && o < 15; o++) {
+      const dep = Array.from({ length: k }, (_, i) => [n[o + 2 * i], n[o + 2 * i + 1]]);
+      if (kumTamam(dep, s[1])) return ev.map((e, i) => [e[0], dep[i][0]]);
+    }
+  }
+  return null;
+}
 function periyotBul(html, duz, ev, dep, ms) {
   const s = skorCoz(ms);
   if (!s) return null;
+  const tablo = periyotTablo(duz, s);
+  if (tablo) return tablo;
   const t = tokenlar(html);
   // a) Skor tablosu: takım adından sonra gelen sayılar, toplamı maç skoruna eşit olmalı
   const takim = (ad, hedef) => {
@@ -275,7 +303,7 @@ function macAyristir(html, a) {
    4) Market seçimi (CSV ve test için)
    ================================================================== */
 const AU_RE = /alt ?\/ ?ust|alt-ust|\balt\b.*\bust\b/;
-const BOLUM_RE = /periyot|ceyrek|yari|\biy\b|takim|ev sahibi|deplasman|tek|cift|uzatma/;
+const BOLUM_RE = /periyot|ceyrek|yari|\biy\b|takim|ev ?sahibi|deplasman|\btek\b|cift|uzatma|handikap/;
 function auIki(e) {
   let alt, ust;
   for (const [k, v] of Object.entries(e)) { const s = sade(k); if (s.includes('alt')) alt = v; else if (s.includes('ust')) ust = v; }
@@ -292,29 +320,36 @@ function auSecim(oran, filtre) {
     const s = sade(ad);
     if (!AU_RE.test(s) || !filtre(s)) continue;
     const [alt, ust] = auIki(e), c = cizgiBul(ad, e);
-    if (!alt || !ust || c === null) continue;
+    if (!(nf(alt) > 1) || !(nf(ust) > 1) || c === null) continue;   // '-' = oran yok
     const fark = Math.abs(nf(alt) - nf(ust));
     if (!en || fark < en.fark) en = { cizgi: c, alt, ust, fark };
   }
   return en;
 }
 const anaAU = o => auSecim(o, s => !BOLUM_RE.test(s));
-const iyAU = o => auSecim(o, s => /(1\.? ?yari|ilk yari|\biy\b)/.test(s) && !/periyot|ceyrek|takim/.test(s));
+const iyAU = o => auSecim(o, s => /(1\.? ?yari|ilk yari|\biy\b)/.test(s) && !/periyot|ceyrek|takim|handikap|ev ?sahibi|deplasman/.test(s));
 const ucluSec = e => {
   const o = {};
   for (const [k, v] of Object.entries(e)) { const s = sade(k); if (/^1/.test(s)) o['1'] = v; else if (/^x/.test(s)) o.X = v; else if (/^2/.test(s)) o['2'] = v; }
   return o;
 };
+// "Maç Sonucu" ya da "Maç Sonucu (Uzt. Dahil)"
 function msOran(oran) {
-  for (const [ad, e] of Object.entries(oran)) if (sade(ad) === 'mac sonucu') return ucluSec(e);
+  for (const [ad, e] of Object.entries(oran)) { const s = sade(ad); if (/^mac sonucu\b/.test(s) && !/alt|ust/.test(s)) return ucluSec(e); }
   return null;
 }
+// Birden çok handikap çizgisinden oranları en dengeli olanı. "(0:18,5)" → ev sahibi −18,5
 function handikap(oran) {
+  let en = null;
   for (const [ad, e] of Object.entries(oran)) {
     const s = sade(ad);
-    if (s.includes('handikap') && !/periyot|ceyrek|yari|\biy\b/.test(s)) return { ad, ...ucluSec(e) };
+    if (!s.includes('handikap') || /periyot|ceyrek|yari|\biy\b/.test(s)) continue;
+    const u = ucluSec(e), h = ad.match(/\(\s*(\d+(?:[.,]\d+)?)\s*:\s*(\d+(?:[.,]\d+)?)\s*\)/);
+    if (!(nf(u['1']) > 1) || !(nf(u['2']) > 1) || !h) continue;
+    const fark = Math.abs(nf(u['1']) - nf(u['2']));
+    if (!en || fark < en.fark) en = { ad, evHnd: nf(h[1]) - nf(h[2]), ...u, fark };
   }
-  return null;
+  return en;
 }
 
 /* ==================================================================
@@ -540,7 +575,7 @@ const BASLIK = [
   'P1 Ev', 'P1 Dep', 'P2 Ev', 'P2 Dep', 'P3 Ev', 'P3 Dep', 'P4 Ev', 'P4 Dep', 'Uzatma Ev', 'Uzatma Dep',
   'İY Skor', 'MS Skor', 'Sonuç', 'Uzatma?', 'Toplam Sayı', 'Normal Süre Toplam', 'P1 Toplam',
   'MS 1', 'MS X', 'MS 2', 'AÜ Çizgi', 'AÜ Alt', 'AÜ Üst', 'AÜ ✓',
-  'HND Market', 'HND 1', 'HND X', 'HND 2', 'İY AÜ Çizgi', 'İY AÜ Alt', 'İY AÜ Üst',
+  'HND Ev Handikap', 'HND 1', 'HND 2', 'İY AÜ Çizgi', 'İY AÜ Alt', 'İY AÜ Üst',
   'Beklenen P1 (Çizgi/4)', 'P1 Sapma %', 'Hız Projeksiyonu', 'Normal Süre − Projeksiyon', 'Toplam − Çizgi',
   'İddaa Kodu', 'Tüm Oranlar'
 ];
@@ -569,7 +604,7 @@ function csvSatir(r) {
     csvD(ms['1'] || '', true), csvD(ms.X || '', true), csvD(ms['2'] || '', true),
     csvD(au ? au.cizgi : '', true), csvD(au ? au.alt : '', true), csvD(au ? au.ust : '', true),
     csvD(au && t ? (toplam > au.cizgi ? 'Üst' : 'Alt') : ''),
-    csvD(h.ad || ''), csvD(h['1'] || '', true), csvD(h.X || '', true), csvD(h['2'] || '', true),
+    csvD(h.evHnd ?? '', true), csvD(h['1'] || '', true), csvD(h['2'] || '', true),
     csvD(iy ? iy.cizgi : '', true), csvD(iy ? iy.alt : '', true), csvD(iy ? iy.ust : '', true),
     csvD(bek === '' ? '' : yuv(bek), true), csvD(sapma, true),
     csvD(proj === '' ? '' : yuv(proj), true),
@@ -607,12 +642,12 @@ async function csvHepsi() {
 async function testCalis() {
   const tarihler = process.env.TEST_TARIH ? process.env.TEST_TARIH.split(',').map(x => x.trim())
     : ['2026-03-14', '2025-11-15', '2024-02-10'];   // sezon içi cumartesiler
-  const durum = {}, rapor = { tarihler, ayar: { SPOR_ALAN, SPOR_DEGER, LISTE_EK, MAC_YOL }, listeler: [], maclar: [] };
+  const durum = {}, rapor = { tarihler, ayar: { SPOR_ALAN, SPOR_DEGER, LISTE_EK }, listeler: [], maclar: [] };
   await fs.mkdir(DEBUG, { recursive: true });
   try {
     const adaylar = [];
     for (const t of tarihler) {
-      for (const ek of [LISTE_EK, '&sport=2', '&s=2'].filter((v, i, a) => a.indexOf(v) === i)) {
+      for (const ek of [LISTE_EK]) {
         try {
           const rows = await listeJson(t, durum, ek);
           const dag = {}, ornek = {};
@@ -632,9 +667,10 @@ async function testCalis() {
     for (const a of adaylar) {
       const deneme = [];
       let html = null;
-      for (const yol of MAC_YOL) {
+      for (const f of MAC_YOL) {
+        const yol = f(a);
         try {
-          const h = await getir(BASE + yol + a.id, 2, 15000);
+          const h = await getir(BASE + yol, 2, 15000);
           const u = sayfaUygun(h, a);
           deneme.push({ yol, uygun: u, baslik: ((h.match(/<title>([\s\S]*?)<\/title>/i) || ['', ''])[1]).trim().slice(0, 150),
             oranCagrisi: (h.match(/openOddsDialog/g) || []).length });
