@@ -7,12 +7,7 @@
   "ayar": {
     "SPOR_ALAN": 23,
     "SPOR_DEGER": "2",
-    "LISTE_EK": "",
-    "MAC_YOL": [
-      "/Basketbol/Mac/Default.aspx?id=",
-      "/Basket/Match/Default.aspx?id=",
-      "/Match/Default.aspx?id="
-    ]
+    "LISTE_EK": ""
   },
   "listeler": [
     {
@@ -346,1007 +341,8 @@
       ]
     },
     {
-      "tarih": "2026-03-14",
-      "ek": "&sport=2",
-      "satir": 1672,
-      "sporAlaniDagilimi": {
-        "1": 1470,
-        "2": 202
-      },
-      "basket": 202,
-      "basketIddaaKodlu": 138,
-      "ornekSatirlar": {
-        "1": [
-          4308546,
-          18,
-          "Kocaelispor",
-          447,
-          "Konyaspor",
-          4,
-          "MS",
-          "0-0",
-          0,
-          0,
-          0,
-          0,
-          1,
-          2,
-          2721016,
-          {
-            "aeleme": 0,
-            "e": 0,
-            "goal": "",
-            "h1": 0,
-            "h2": 0,
-            "k1": 0,
-            "k2": 0,
-            "ogd": 1,
-            "tId": 0
-          },
-          "13:30",
-          0,
-          "2.03",
-          "2.62",
-          "3.04",
-          "1.34",
-          "2.18",
-          1,
-          "0.0",
-          "0.0",
-          "0.0",
-          "0.0",
-          "0.0",
-          "1",
-          "2",
-          "0",
-          "0",
-          null,
-          "1",
-          "14/03/2026",
-          [
-            1,
-            "Türkiye",
-            1,
-            "Süper Lig",
-            70381,
-            "2025/2026",
-            "",
-            0,
-            1,
-            "TSL",
-            0,
-            1
-          ],
-          1
-        ],
-        "2": [
-          4350570,
-          11986,
-          "Erokspor",
-          3013,
-          "Aliağa Petkim Spor",
-          13,
-          "MS",
-          "49-27",
-          0,
-          0,
-          0,
-          0,
-          74,
-          57,
-          2714640,
-          {
-            "aeleme": 0,
-            "e": 0,
-            "goal": "",
-            "h1": 0,
-            "h2": 0,
-            "k1": 0,
-            "k2": 0,
-            "ogd": 0,
-            "tId": 0
-          },
-          "13:00",
-          0,
-          "0.00",
-          "0.00",
-          "0.00",
-          "0.00",
-          "0.00",
-          2,
-          "0.0",
-          "0.0",
-          "0.0",
-          "0.0",
-          "0.0",
-          "74",
-          "57",
-          "49",
-          "27",
-          null,
-          "1",
-          "14/03/2026",
-          [
-            1,
-            "Türkiye",
-            1,
-            "Türkiye Sigorta Basketbol Süper Ligi",
-            9684,
-            "2025/2026",
-            "",
-            0,
-            1,
-            "BSL",
-            0,
-            2
-          ],
-          1
-        ]
-      },
-      "basketOrnek": [
-        [
-          4350570,
-          11986,
-          "Erokspor",
-          3013,
-          "Aliağa Petkim Spor",
-          13,
-          "MS",
-          "49-27",
-          0,
-          0,
-          0,
-          0,
-          74,
-          57,
-          2714640,
-          {
-            "aeleme": 0,
-            "e": 0,
-            "goal": "",
-            "h1": 0,
-            "h2": 0,
-            "k1": 0,
-            "k2": 0,
-            "ogd": 0,
-            "tId": 0
-          },
-          "13:00",
-          0,
-          "0.00",
-          "0.00",
-          "0.00",
-          "0.00",
-          "0.00",
-          2,
-          "0.0",
-          "0.0",
-          "0.0",
-          "0.0",
-          "0.0",
-          "74",
-          "57",
-          "49",
-          "27",
-          null,
-          "1",
-          "14/03/2026",
-          [
-            1,
-            "Türkiye",
-            1,
-            "Türkiye Sigorta Basketbol Süper Ligi",
-            9684,
-            "2025/2026",
-            "",
-            0,
-            1,
-            "BSL",
-            0,
-            2
-          ],
-          1
-        ],
-        [
-          4350574,
-          669,
-          "Trabzonspor",
-          2333,
-          "Biotekno Körfez Basket",
-          13,
-          "MS",
-          "47-47",
-          0,
-          0,
-          0,
-          0,
-          96,
-          92,
-          2715010,
-          {
-            "aeleme": 0,
-            "e": 0,
-            "goal": "",
-            "h1": 0,
-            "h2": 0,
-            "k1": 0,
-            "k2": 0,
-            "ogd": 0,
-            "tId": 0
-          },
-          "15:30",
-          0,
-          "0.00",
-          "0.00",
-          "0.00",
-          "0.00",
-          "0.00",
-          2,
-          "0.0",
-          "0.0",
-          "0.0",
-          "0.0",
-          "0.0",
-          "96",
-          "92",
-          "47",
-          "47",
-          null,
-          "1",
-          "14/03/2026",
-          [
-            1,
-            "Türkiye",
-            1,
-            "Türkiye Sigorta Basketbol Süper Ligi",
-            9684,
-            "2025/2026",
-            "",
-            0,
-            1,
-            "BSL",
-            0,
-            2
-          ],
-          1
-        ],
-        [
-          4350577,
-          55,
-          "Karşıyaka",
-          54,
-          "Türk Telekom",
-          13,
-          "MS",
-          "30-42",
-          0,
-          0,
-          0,
-          0,
-          75,
-          85,
-          2714236,
-          {
-            "aeleme": 0,
-            "e": 0,
-            "goal": "",
-            "h1": 0,
-            "h2": 0,
-            "k1": 0,
-            "k2": 0,
-            "ogd": 0,
-            "tId": 0
-          },
-          "18:00",
-          0,
-          "0.00",
-          "0.00",
-          "0.00",
-          "0.00",
-          "0.00",
-          2,
-          "0.0",
-          "0.0",
-          "0.0",
-          "0.0",
-          "0.0",
-          "75",
-          "85",
-          "30",
-          "42",
-          null,
-          "1",
-          "14/03/2026",
-          [
-            1,
-            "Türkiye",
-            1,
-            "Türkiye Sigorta Basketbol Süper Ligi",
-            9684,
-            "2025/2026",
-            "",
-            0,
-            1,
-            "BSL",
-            0,
-            2
-          ],
-          1
-        ]
-      ]
-    },
-    {
-      "tarih": "2026-03-14",
-      "ek": "&s=2",
-      "satir": 1672,
-      "sporAlaniDagilimi": {
-        "1": 1470,
-        "2": 202
-      },
-      "basket": 202,
-      "basketIddaaKodlu": 138,
-      "ornekSatirlar": {
-        "1": [
-          4308546,
-          18,
-          "Kocaelispor",
-          447,
-          "Konyaspor",
-          4,
-          "MS",
-          "0-0",
-          0,
-          0,
-          0,
-          0,
-          1,
-          2,
-          2721016,
-          {
-            "aeleme": 0,
-            "e": 0,
-            "goal": "",
-            "h1": 0,
-            "h2": 0,
-            "k1": 0,
-            "k2": 0,
-            "ogd": 1,
-            "tId": 0
-          },
-          "13:30",
-          0,
-          "2.03",
-          "2.62",
-          "3.04",
-          "1.34",
-          "2.18",
-          1,
-          "0.0",
-          "0.0",
-          "0.0",
-          "0.0",
-          "0.0",
-          "1",
-          "2",
-          "0",
-          "0",
-          null,
-          "1",
-          "14/03/2026",
-          [
-            1,
-            "Türkiye",
-            1,
-            "Süper Lig",
-            70381,
-            "2025/2026",
-            "",
-            0,
-            1,
-            "TSL",
-            0,
-            1
-          ],
-          1
-        ],
-        "2": [
-          4350570,
-          11986,
-          "Erokspor",
-          3013,
-          "Aliağa Petkim Spor",
-          13,
-          "MS",
-          "49-27",
-          0,
-          0,
-          0,
-          0,
-          74,
-          57,
-          2714640,
-          {
-            "aeleme": 0,
-            "e": 0,
-            "goal": "",
-            "h1": 0,
-            "h2": 0,
-            "k1": 0,
-            "k2": 0,
-            "ogd": 0,
-            "tId": 0
-          },
-          "13:00",
-          0,
-          "0.00",
-          "0.00",
-          "0.00",
-          "0.00",
-          "0.00",
-          2,
-          "0.0",
-          "0.0",
-          "0.0",
-          "0.0",
-          "0.0",
-          "74",
-          "57",
-          "49",
-          "27",
-          null,
-          "1",
-          "14/03/2026",
-          [
-            1,
-            "Türkiye",
-            1,
-            "Türkiye Sigorta Basketbol Süper Ligi",
-            9684,
-            "2025/2026",
-            "",
-            0,
-            1,
-            "BSL",
-            0,
-            2
-          ],
-          1
-        ]
-      },
-      "basketOrnek": [
-        [
-          4350570,
-          11986,
-          "Erokspor",
-          3013,
-          "Aliağa Petkim Spor",
-          13,
-          "MS",
-          "49-27",
-          0,
-          0,
-          0,
-          0,
-          74,
-          57,
-          2714640,
-          {
-            "aeleme": 0,
-            "e": 0,
-            "goal": "",
-            "h1": 0,
-            "h2": 0,
-            "k1": 0,
-            "k2": 0,
-            "ogd": 0,
-            "tId": 0
-          },
-          "13:00",
-          0,
-          "0.00",
-          "0.00",
-          "0.00",
-          "0.00",
-          "0.00",
-          2,
-          "0.0",
-          "0.0",
-          "0.0",
-          "0.0",
-          "0.0",
-          "74",
-          "57",
-          "49",
-          "27",
-          null,
-          "1",
-          "14/03/2026",
-          [
-            1,
-            "Türkiye",
-            1,
-            "Türkiye Sigorta Basketbol Süper Ligi",
-            9684,
-            "2025/2026",
-            "",
-            0,
-            1,
-            "BSL",
-            0,
-            2
-          ],
-          1
-        ],
-        [
-          4350574,
-          669,
-          "Trabzonspor",
-          2333,
-          "Biotekno Körfez Basket",
-          13,
-          "MS",
-          "47-47",
-          0,
-          0,
-          0,
-          0,
-          96,
-          92,
-          2715010,
-          {
-            "aeleme": 0,
-            "e": 0,
-            "goal": "",
-            "h1": 0,
-            "h2": 0,
-            "k1": 0,
-            "k2": 0,
-            "ogd": 0,
-            "tId": 0
-          },
-          "15:30",
-          0,
-          "0.00",
-          "0.00",
-          "0.00",
-          "0.00",
-          "0.00",
-          2,
-          "0.0",
-          "0.0",
-          "0.0",
-          "0.0",
-          "0.0",
-          "96",
-          "92",
-          "47",
-          "47",
-          null,
-          "1",
-          "14/03/2026",
-          [
-            1,
-            "Türkiye",
-            1,
-            "Türkiye Sigorta Basketbol Süper Ligi",
-            9684,
-            "2025/2026",
-            "",
-            0,
-            1,
-            "BSL",
-            0,
-            2
-          ],
-          1
-        ],
-        [
-          4350577,
-          55,
-          "Karşıyaka",
-          54,
-          "Türk Telekom",
-          13,
-          "MS",
-          "30-42",
-          0,
-          0,
-          0,
-          0,
-          75,
-          85,
-          2714236,
-          {
-            "aeleme": 0,
-            "e": 0,
-            "goal": "",
-            "h1": 0,
-            "h2": 0,
-            "k1": 0,
-            "k2": 0,
-            "ogd": 0,
-            "tId": 0
-          },
-          "18:00",
-          0,
-          "0.00",
-          "0.00",
-          "0.00",
-          "0.00",
-          "0.00",
-          2,
-          "0.0",
-          "0.0",
-          "0.0",
-          "0.0",
-          "0.0",
-          "75",
-          "85",
-          "30",
-          "42",
-          null,
-          "1",
-          "14/03/2026",
-          [
-            1,
-            "Türkiye",
-            1,
-            "Türkiye Sigorta Basketbol Süper Ligi",
-            9684,
-            "2025/2026",
-            "",
-            0,
-            1,
-            "BSL",
-            0,
-            2
-          ],
-          1
-        ]
-      ]
-    },
-    {
       "tarih": "2025-11-15",
       "ek": "",
-      "hata": "maç listesi alınamadı: fetch failed"
-    },
-    {
-      "tarih": "2025-11-15",
-      "ek": "&sport=2",
-      "satir": 1015,
-      "sporAlaniDagilimi": {
-        "1": 821,
-        "2": 194
-      },
-      "basket": 194,
-      "basketIddaaKodlu": 122,
-      "ornekSatirlar": {
-        "1": [
-          4265000,
-          504,
-          "Türkiye",
-          511,
-          "Bulgaristan",
-          4,
-          "MS",
-          "1-0",
-          0,
-          0,
-          0,
-          0,
-          2,
-          0,
-          2437791,
-          {
-            "aeleme": 2,
-            "ba": "BUL",
-            "ban": "Bulgaristan",
-            "bh": "TUR",
-            "bhn": "Türkiye",
-            "e": 0,
-            "goal": "",
-            "h1": 0,
-            "h2": 0,
-            "k1": 0,
-            "k2": 0,
-            "ogd": 1,
-            "tId": 0
-          },
-          "20:00",
-          0,
-          "1.00",
-          "8.77",
-          "17.45",
-          "2.98",
-          "1.19",
-          1,
-          "0.0",
-          "0.0",
-          "0.0",
-          "0.0",
-          "0.0",
-          "2",
-          "0",
-          "1",
-          "0",
-          null,
-          "1",
-          "15/11/2025",
-          [
-            611,
-            "Dünya Kupası 2026 Elemeler",
-            14066,
-            "Avrupa Elemeleri Grup E",
-            69277,
-            "2026",
-            "",
-            2,
-            0,
-            "DKE",
-            0,
-            1
-          ],
-          1
-        ],
-        "2": [
-          4350457,
-          3787,
-          "Bursaspor Basketbol",
-          3013,
-          "Aliağa Petkim Spor",
-          13,
-          "MS",
-          "39-35",
-          0,
-          0,
-          0,
-          0,
-          76,
-          74,
-          2440192,
-          {
-            "aeleme": 0,
-            "e": 0,
-            "goal": "",
-            "h1": 0,
-            "h2": 0,
-            "k1": 0,
-            "k2": 0,
-            "ogd": 0,
-            "tId": 0
-          },
-          "13:00",
-          0,
-          "0.00",
-          "0.00",
-          "0.00",
-          "0.00",
-          "0.00",
-          2,
-          "0.0",
-          "0.0",
-          "0.0",
-          "0.0",
-          "0.0",
-          "76",
-          "74",
-          "39",
-          "35",
-          null,
-          "1",
-          "15/11/2025",
-          [
-            1,
-            "Türkiye",
-            1,
-            "Türkiye Sigorta Basketbol Süper Ligi",
-            9684,
-            "2025/2026",
-            "",
-            0,
-            1,
-            "BSL",
-            0,
-            2
-          ],
-          1
-        ]
-      },
-      "basketOrnek": [
-        [
-          4350457,
-          3787,
-          "Bursaspor Basketbol",
-          3013,
-          "Aliağa Petkim Spor",
-          13,
-          "MS",
-          "39-35",
-          0,
-          0,
-          0,
-          0,
-          76,
-          74,
-          2440192,
-          {
-            "aeleme": 0,
-            "e": 0,
-            "goal": "",
-            "h1": 0,
-            "h2": 0,
-            "k1": 0,
-            "k2": 0,
-            "ogd": 0,
-            "tId": 0
-          },
-          "13:00",
-          0,
-          "0.00",
-          "0.00",
-          "0.00",
-          "0.00",
-          "0.00",
-          2,
-          "0.0",
-          "0.0",
-          "0.0",
-          "0.0",
-          "0.0",
-          "76",
-          "74",
-          "39",
-          "35",
-          null,
-          "1",
-          "15/11/2025",
-          [
-            1,
-            "Türkiye",
-            1,
-            "Türkiye Sigorta Basketbol Süper Ligi",
-            9684,
-            "2025/2026",
-            "",
-            0,
-            1,
-            "BSL",
-            0,
-            2
-          ],
-          1
-        ],
-        [
-          4350464,
-          56,
-          "Mersin Spor",
-          54,
-          "Türk Telekom",
-          13,
-          "MS",
-          "36-48",
-          0,
-          0,
-          0,
-          0,
-          82,
-          96,
-          2438778,
-          {
-            "aeleme": 0,
-            "e": 0,
-            "goal": "",
-            "h1": 0,
-            "h2": 0,
-            "k1": 0,
-            "k2": 0,
-            "ogd": 0,
-            "tId": 0
-          },
-          "15:30",
-          0,
-          "0.00",
-          "0.00",
-          "0.00",
-          "0.00",
-          "0.00",
-          2,
-          "0.0",
-          "0.0",
-          "0.0",
-          "0.0",
-          "0.0",
-          "82",
-          "96",
-          "36",
-          "48",
-          null,
-          "1",
-          "15/11/2025",
-          [
-            1,
-            "Türkiye",
-            1,
-            "Türkiye Sigorta Basketbol Süper Ligi",
-            9684,
-            "2025/2026",
-            "",
-            0,
-            1,
-            "BSL",
-            0,
-            2
-          ],
-          1
-        ],
-        [
-          4350461,
-          55,
-          "Karşıyaka",
-          2333,
-          "Biotekno Körfez Basket",
-          13,
-          "MS",
-          "36-48",
-          0,
-          0,
-          0,
-          0,
-          69,
-          80,
-          2437802,
-          {
-            "aeleme": 0,
-            "e": 0,
-            "goal": "",
-            "h1": 0,
-            "h2": 0,
-            "k1": 0,
-            "k2": 0,
-            "ogd": 0,
-            "tId": 0
-          },
-          "18:00",
-          0,
-          "0.00",
-          "0.00",
-          "0.00",
-          "0.00",
-          "0.00",
-          2,
-          "0.0",
-          "0.0",
-          "0.0",
-          "0.0",
-          "0.0",
-          "69",
-          "80",
-          "36",
-          "48",
-          null,
-          "1",
-          "15/11/2025",
-          [
-            1,
-            "Türkiye",
-            1,
-            "Türkiye Sigorta Basketbol Süper Ligi",
-            9684,
-            "2025/2026",
-            "",
-            0,
-            1,
-            "BSL",
-            0,
-            2
-          ],
-          1
-        ]
-      ]
-    },
-    {
-      "tarih": "2025-11-15",
-      "ek": "&s=2",
       "satir": 1015,
       "sporAlaniDagilimi": {
         "1": 821,
@@ -1681,666 +677,6 @@
     {
       "tarih": "2024-02-10",
       "ek": "",
-      "satir": 1039,
-      "sporAlaniDagilimi": {
-        "1": 876,
-        "2": 163
-      },
-      "basket": 163,
-      "basketIddaaKodlu": 126,
-      "ornekSatirlar": {
-        "1": [
-          3871099,
-          537,
-          "Fatih Karagümrük",
-          659,
-          "Pendikspor",
-          4,
-          "MS",
-          "1-0",
-          0,
-          0,
-          0,
-          0,
-          2,
-          0,
-          1495452,
-          {
-            "aeleme": 0,
-            "e": 0,
-            "goal": "",
-            "h1": 0,
-            "h2": 0,
-            "k1": 0,
-            "k2": 0,
-            "ogd": 1,
-            "tId": 0
-          },
-          "16:00",
-          2,
-          "1.80",
-          "3.16",
-          "3.13",
-          "1.76",
-          "1.60",
-          1,
-          "0.0",
-          "0.0",
-          "0.0",
-          "0.0",
-          "0.0",
-          "2",
-          "0",
-          "1",
-          "0",
-          null,
-          "1",
-          "10/02/2024",
-          [
-            1,
-            "Türkiye",
-            1,
-            "Süper Lig",
-            63860,
-            "2023/2024",
-            "",
-            0,
-            1,
-            "TSL",
-            0,
-            1
-          ],
-          1
-        ],
-        "2": [
-          3984932,
-          3881,
-          "Bahçeşehir Koleji",
-          54,
-          "Türk Telekom",
-          20,
-          "UZ",
-          "46-31",
-          0,
-          0,
-          0,
-          0,
-          90,
-          92,
-          1544266,
-          {
-            "aeleme": 0,
-            "e": 0,
-            "goal": "",
-            "h1": 0,
-            "h2": 0,
-            "k1": 0,
-            "k2": 0,
-            "ogd": 0,
-            "tId": 0
-          },
-          "13:00",
-          0,
-          "0.00",
-          "0.00",
-          "0.00",
-          "0.00",
-          "0.00",
-          2,
-          "0.0",
-          "0.0",
-          "0.0",
-          "0.0",
-          "0.0",
-          "81",
-          "81",
-          "46",
-          "31",
-          null,
-          "1",
-          "10/02/2024",
-          [
-            1,
-            "Türkiye",
-            1,
-            "Türkiye Sigorta Basketbol Süper Ligi",
-            7423,
-            "2023/2024",
-            "",
-            0,
-            1,
-            "BSL",
-            0,
-            2
-          ],
-          1
-        ]
-      },
-      "basketOrnek": [
-        [
-          3984932,
-          3881,
-          "Bahçeşehir Koleji",
-          54,
-          "Türk Telekom",
-          20,
-          "UZ",
-          "46-31",
-          0,
-          0,
-          0,
-          0,
-          90,
-          92,
-          1544266,
-          {
-            "aeleme": 0,
-            "e": 0,
-            "goal": "",
-            "h1": 0,
-            "h2": 0,
-            "k1": 0,
-            "k2": 0,
-            "ogd": 0,
-            "tId": 0
-          },
-          "13:00",
-          0,
-          "0.00",
-          "0.00",
-          "0.00",
-          "0.00",
-          "0.00",
-          2,
-          "0.0",
-          "0.0",
-          "0.0",
-          "0.0",
-          "0.0",
-          "81",
-          "81",
-          "46",
-          "31",
-          null,
-          "1",
-          "10/02/2024",
-          [
-            1,
-            "Türkiye",
-            1,
-            "Türkiye Sigorta Basketbol Süper Ligi",
-            7423,
-            "2023/2024",
-            "",
-            0,
-            1,
-            "BSL",
-            0,
-            2
-          ],
-          1
-        ],
-        [
-          3984931,
-          55,
-          "Karşıyaka",
-          49,
-          "Darüşşafaka Lassa",
-          13,
-          "MS",
-          "46-45",
-          0,
-          0,
-          0,
-          0,
-          86,
-          98,
-          1544210,
-          {
-            "aeleme": 0,
-            "e": 0,
-            "goal": "",
-            "h1": 0,
-            "h2": 0,
-            "k1": 0,
-            "k2": 0,
-            "ogd": 0,
-            "tId": 0
-          },
-          "15:30",
-          0,
-          "0.00",
-          "0.00",
-          "0.00",
-          "0.00",
-          "0.00",
-          2,
-          "0.0",
-          "0.0",
-          "0.0",
-          "0.0",
-          "0.0",
-          "86",
-          "98",
-          "46",
-          "45",
-          null,
-          "1",
-          "10/02/2024",
-          [
-            1,
-            "Türkiye",
-            1,
-            "Türkiye Sigorta Basketbol Süper Ligi",
-            7423,
-            "2023/2024",
-            "",
-            0,
-            1,
-            "BSL",
-            0,
-            2
-          ],
-          1
-        ],
-        [
-          3984936,
-          6861,
-          "Yukatel Merkezefendi Bld.",
-          2333,
-          "Biotekno Körfez Basket",
-          13,
-          "MS",
-          "45-29",
-          0,
-          0,
-          0,
-          0,
-          82,
-          68,
-          1544245,
-          {
-            "aeleme": 0,
-            "e": 0,
-            "goal": "",
-            "h1": 0,
-            "h2": 0,
-            "k1": 0,
-            "k2": 0,
-            "ogd": 0,
-            "tId": 0
-          },
-          "18:00",
-          0,
-          "0.00",
-          "0.00",
-          "0.00",
-          "0.00",
-          "0.00",
-          2,
-          "0.0",
-          "0.0",
-          "0.0",
-          "0.0",
-          "0.0",
-          "82",
-          "68",
-          "45",
-          "29",
-          null,
-          "1",
-          "10/02/2024",
-          [
-            1,
-            "Türkiye",
-            1,
-            "Türkiye Sigorta Basketbol Süper Ligi",
-            7423,
-            "2023/2024",
-            "",
-            0,
-            1,
-            "BSL",
-            0,
-            2
-          ],
-          1
-        ]
-      ]
-    },
-    {
-      "tarih": "2024-02-10",
-      "ek": "&sport=2",
-      "satir": 1039,
-      "sporAlaniDagilimi": {
-        "1": 876,
-        "2": 163
-      },
-      "basket": 163,
-      "basketIddaaKodlu": 126,
-      "ornekSatirlar": {
-        "1": [
-          3871099,
-          537,
-          "Fatih Karagümrük",
-          659,
-          "Pendikspor",
-          4,
-          "MS",
-          "1-0",
-          0,
-          0,
-          0,
-          0,
-          2,
-          0,
-          1495452,
-          {
-            "aeleme": 0,
-            "e": 0,
-            "goal": "",
-            "h1": 0,
-            "h2": 0,
-            "k1": 0,
-            "k2": 0,
-            "ogd": 1,
-            "tId": 0
-          },
-          "16:00",
-          2,
-          "1.80",
-          "3.16",
-          "3.13",
-          "1.76",
-          "1.60",
-          1,
-          "0.0",
-          "0.0",
-          "0.0",
-          "0.0",
-          "0.0",
-          "2",
-          "0",
-          "1",
-          "0",
-          null,
-          "1",
-          "10/02/2024",
-          [
-            1,
-            "Türkiye",
-            1,
-            "Süper Lig",
-            63860,
-            "2023/2024",
-            "",
-            0,
-            1,
-            "TSL",
-            0,
-            1
-          ],
-          1
-        ],
-        "2": [
-          3984932,
-          3881,
-          "Bahçeşehir Koleji",
-          54,
-          "Türk Telekom",
-          20,
-          "UZ",
-          "46-31",
-          0,
-          0,
-          0,
-          0,
-          90,
-          92,
-          1544266,
-          {
-            "aeleme": 0,
-            "e": 0,
-            "goal": "",
-            "h1": 0,
-            "h2": 0,
-            "k1": 0,
-            "k2": 0,
-            "ogd": 0,
-            "tId": 0
-          },
-          "13:00",
-          0,
-          "0.00",
-          "0.00",
-          "0.00",
-          "0.00",
-          "0.00",
-          2,
-          "0.0",
-          "0.0",
-          "0.0",
-          "0.0",
-          "0.0",
-          "81",
-          "81",
-          "46",
-          "31",
-          null,
-          "1",
-          "10/02/2024",
-          [
-            1,
-            "Türkiye",
-            1,
-            "Türkiye Sigorta Basketbol Süper Ligi",
-            7423,
-            "2023/2024",
-            "",
-            0,
-            1,
-            "BSL",
-            0,
-            2
-          ],
-          1
-        ]
-      },
-      "basketOrnek": [
-        [
-          3984932,
-          3881,
-          "Bahçeşehir Koleji",
-          54,
-          "Türk Telekom",
-          20,
-          "UZ",
-          "46-31",
-          0,
-          0,
-          0,
-          0,
-          90,
-          92,
-          1544266,
-          {
-            "aeleme": 0,
-            "e": 0,
-            "goal": "",
-            "h1": 0,
-            "h2": 0,
-            "k1": 0,
-            "k2": 0,
-            "ogd": 0,
-            "tId": 0
-          },
-          "13:00",
-          0,
-          "0.00",
-          "0.00",
-          "0.00",
-          "0.00",
-          "0.00",
-          2,
-          "0.0",
-          "0.0",
-          "0.0",
-          "0.0",
-          "0.0",
-          "81",
-          "81",
-          "46",
-          "31",
-          null,
-          "1",
-          "10/02/2024",
-          [
-            1,
-            "Türkiye",
-            1,
-            "Türkiye Sigorta Basketbol Süper Ligi",
-            7423,
-            "2023/2024",
-            "",
-            0,
-            1,
-            "BSL",
-            0,
-            2
-          ],
-          1
-        ],
-        [
-          3984931,
-          55,
-          "Karşıyaka",
-          49,
-          "Darüşşafaka Lassa",
-          13,
-          "MS",
-          "46-45",
-          0,
-          0,
-          0,
-          0,
-          86,
-          98,
-          1544210,
-          {
-            "aeleme": 0,
-            "e": 0,
-            "goal": "",
-            "h1": 0,
-            "h2": 0,
-            "k1": 0,
-            "k2": 0,
-            "ogd": 0,
-            "tId": 0
-          },
-          "15:30",
-          0,
-          "0.00",
-          "0.00",
-          "0.00",
-          "0.00",
-          "0.00",
-          2,
-          "0.0",
-          "0.0",
-          "0.0",
-          "0.0",
-          "0.0",
-          "86",
-          "98",
-          "46",
-          "45",
-          null,
-          "1",
-          "10/02/2024",
-          [
-            1,
-            "Türkiye",
-            1,
-            "Türkiye Sigorta Basketbol Süper Ligi",
-            7423,
-            "2023/2024",
-            "",
-            0,
-            1,
-            "BSL",
-            0,
-            2
-          ],
-          1
-        ],
-        [
-          3984936,
-          6861,
-          "Yukatel Merkezefendi Bld.",
-          2333,
-          "Biotekno Körfez Basket",
-          13,
-          "MS",
-          "45-29",
-          0,
-          0,
-          0,
-          0,
-          82,
-          68,
-          1544245,
-          {
-            "aeleme": 0,
-            "e": 0,
-            "goal": "",
-            "h1": 0,
-            "h2": 0,
-            "k1": 0,
-            "k2": 0,
-            "ogd": 0,
-            "tId": 0
-          },
-          "18:00",
-          0,
-          "0.00",
-          "0.00",
-          "0.00",
-          "0.00",
-          "0.00",
-          2,
-          "0.0",
-          "0.0",
-          "0.0",
-          "0.0",
-          "0.0",
-          "82",
-          "68",
-          "45",
-          "29",
-          null,
-          "1",
-          "10/02/2024",
-          [
-            1,
-            "Türkiye",
-            1,
-            "Türkiye Sigorta Basketbol Süper Ligi",
-            7423,
-            "2023/2024",
-            "",
-            0,
-            1,
-            "BSL",
-            0,
-            2
-          ],
-          1
-        ]
-      ]
-    },
-    {
-      "tarih": "2024-02-10",
-      "ek": "&s=2",
       "satir": 1039,
       "sporAlaniDagilimi": {
         "1": 876,
@@ -2684,24 +1020,90 @@
       },
       "deneme": [
         {
-          "yol": "/Basketbol/Mac/Default.aspx?id=",
-          "uygun": false,
-          "baslik": "Hata",
-          "oranCagrisi": 0
+          "yol": "/Basket-Mac/4350570/erokspor-aliaga-petkim-spor",
+          "uygun": true,
+          "baslik": "Erokspor - Aliağa Petkim Spor (14.03.2026) Basketbol Maç Detayı - Türkiye Türkiye Sigorta Basketbol Süper Ligi 2025/2026 @ Mackolik.com",
+          "oranCagrisi": 10
         },
         {
-          "yol": "/Basket/Match/Default.aspx?id=",
-          "uygun": false,
-          "baslik": "Hata",
-          "oranCagrisi": 0
+          "yol": "/Basket-Mac/4350570",
+          "hata": "HTTP 404"
         },
         {
-          "yol": "/Match/Default.aspx?id=",
-          "uygun": false,
-          "baslik": "",
-          "oranCagrisi": 0
+          "yol": "/Basket-Mac/4350570/mac",
+          "uygun": true,
+          "baslik": "Erokspor - Aliağa Petkim Spor (14.03.2026) Basketbol Maç Detayı - Türkiye Türkiye Sigorta Basketbol Süper Ligi 2025/2026 @ Mackolik.com",
+          "oranCagrisi": 10
         }
-      ]
+      ],
+      "ms": "74-57",
+      "per": [
+        [
+          28,
+          15
+        ],
+        [
+          21,
+          12
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          11,
+          12
+        ]
+      ],
+      "mbs": "1",
+      "marketler": [
+        "Maç Sonucu (Uzt. Dahil)",
+        "Handikaplı Maç Sonucu (0:8,5)",
+        "Maç Sonucu Alt/Üst (165,5)",
+        "Maç Sonucu Alt/Üst (166,5)",
+        "Maç Sonucu Alt/Üst (167,5)"
+      ],
+      "oran": {
+        "Maç Sonucu (Uzt. Dahil)": {
+          "1": "-",
+          "2": "3.83"
+        },
+        "Handikaplı Maç Sonucu (0:8,5)": {
+          "1": "1.62",
+          "2": "1.65"
+        },
+        "Maç Sonucu Alt/Üst (165,5)": {
+          "Alt": "1.64",
+          "Üst": "1.63"
+        },
+        "Maç Sonucu Alt/Üst (166,5)": {
+          "Alt": "1.61",
+          "Üst": "1.65"
+        },
+        "Maç Sonucu Alt/Üst (167,5)": {
+          "Alt": "1.60",
+          "Üst": "1.66"
+        }
+      },
+      "anaAU": {
+        "cizgi": 165.5,
+        "alt": "1.64",
+        "ust": "1.63",
+        "fark": 0.010000000000000009
+      },
+      "iyAU": null,
+      "msOran": {
+        "1": "-",
+        "2": "3.83"
+      },
+      "handikap": {
+        "1": "1.62",
+        "2": "1.65",
+        "ad": "Handikaplı Maç Sonucu (0:8,5)",
+        "evHnd": -8.5,
+        "fark": 0.029999999999999805
+      },
+      "periyotIzi": ""
     },
     {
       "aday": {
@@ -2717,24 +1119,128 @@
       },
       "deneme": [
         {
-          "yol": "/Basketbol/Mac/Default.aspx?id=",
-          "uygun": false,
-          "baslik": "Hata",
-          "oranCagrisi": 0
+          "yol": "/Basket-Mac/4409406/buyuk-britanya-k-avusturya-k",
+          "uygun": true,
+          "baslik": "Büyük Britanya (K) - Avusturya (K) (14.03.2026) Basketbol Maç Detayı - EuroBasket 2027 (K) Elemeler 1.Tur Grup D 2027 @ Mackolik.com",
+          "oranCagrisi": 25
         },
         {
-          "yol": "/Basket/Match/Default.aspx?id=",
-          "uygun": false,
-          "baslik": "Hata",
-          "oranCagrisi": 0
+          "yol": "/Basket-Mac/4409406",
+          "hata": "HTTP 404"
         },
         {
-          "yol": "/Match/Default.aspx?id=",
-          "uygun": false,
-          "baslik": "",
-          "oranCagrisi": 0
+          "yol": "/Basket-Mac/4409406/mac",
+          "uygun": true,
+          "baslik": "Büyük Britanya (K) - Avusturya (K) (14.03.2026) Basketbol Maç Detayı - EuroBasket 2027 (K) Elemeler 1.Tur Grup D 2027 @ Mackolik.com",
+          "oranCagrisi": 25
         }
-      ]
+      ],
+      "ms": "83-71",
+      "per": [
+        [
+          14,
+          20
+        ],
+        [
+          21,
+          16
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          29,
+          15
+        ]
+      ],
+      "mbs": "3",
+      "marketler": [
+        "Maç Sonucu (Uzt. Dahil)",
+        "Handikaplı Maç Sonucu (0:11,5)",
+        "Handikaplı Maç Sonucu (0:10,5)",
+        "Maç Sonucu Alt/Üst (148,5)",
+        "Maç Sonucu Alt/Üst (150,5)",
+        "Uzatma Oynanır",
+        "Handikaplı 1. Yarı Sonucu (0:6,5)",
+        "Handikaplı 1. Yarı Sonucu (0:5,5)",
+        "1. Yarı Alt/Üst (74,5)",
+        "1. Yarı Alt/Üst (75,5)",
+        "Daha Çok Sayı Olacak Periyot"
+      ],
+      "oran": {
+        "Maç Sonucu (Uzt. Dahil)": {
+          "1": "-",
+          "2": "5.46"
+        },
+        "Handikaplı Maç Sonucu (0:11,5)": {
+          "1": "1.58",
+          "2": "1.64"
+        },
+        "Handikaplı Maç Sonucu (0:10,5)": {
+          "1": "1.57",
+          "2": "1.66"
+        },
+        "Maç Sonucu Alt/Üst (148,5)": {
+          "Alt": "1.64",
+          "Üst": "1.58"
+        },
+        "Maç Sonucu Alt/Üst (150,5)": {
+          "Alt": "1.60",
+          "Üst": "1.63"
+        },
+        "Uzatma Oynanır": {
+          "Evet": "12.65",
+          "Hayır": "-"
+        },
+        "Handikaplı 1. Yarı Sonucu (0:6,5)": {
+          "1": "1.60",
+          "2": "1.63"
+        },
+        "Handikaplı 1. Yarı Sonucu (0:5,5)": {
+          "1": "1.56",
+          "2": "1.68"
+        },
+        "1. Yarı Alt/Üst (74,5)": {
+          "Alt": "1.57",
+          "Üst": "1.66"
+        },
+        "1. Yarı Alt/Üst (75,5)": {
+          "Alt": "1.59",
+          "Üst": "1.64"
+        },
+        "Daha Çok Sayı Olacak Periyot": {
+          "1.P": "3.05",
+          "2.P": "3.14",
+          "3.P": "3.26",
+          "4.P": "2.80",
+          "Eşit": "9.45"
+        }
+      },
+      "anaAU": {
+        "cizgi": 150.5,
+        "alt": "1.60",
+        "ust": "1.63",
+        "fark": 0.029999999999999805
+      },
+      "iyAU": {
+        "cizgi": 75.5,
+        "alt": "1.59",
+        "ust": "1.64",
+        "fark": 0.04999999999999982
+      },
+      "msOran": {
+        "1": "-",
+        "2": "5.46"
+      },
+      "handikap": {
+        "1": "1.58",
+        "2": "1.64",
+        "ad": "Handikaplı Maç Sonucu (0:11,5)",
+        "evHnd": -11.5,
+        "fark": 0.05999999999999983
+      },
+      "periyotIzi": "141', ['1','2'])\">1.64</a> </div> </div> <div style=\"clear:both\"></div> </div> </div> <div class=\"md\" style=\"border:0;width: 300px\"> <div class=\"detail-title\" style=\"width:auto\"> Daha Çok Sayı Olacak Periyot <span style=\"float:right\">71569&nbsp;&nbsp;<img src=\"http://im.mackolik.com/img5/iddaa/mbs3.png\"></span> </div> <div> <div style=\"float:left;min-width:50px;width:60px\"> <div class=\"sgoutcome-name\">1.P</div> <div class=\"sgoutcome-value\"> <a class=\"compare-rate-bg-up\" href=\"javascript:openOddsDialog('3', 'Daha Çok Sayı Olacak Periyot', ['1.P','2.P','3.P','4.P','Eşit'], ['3.05','3.14','3.26','2.80','9.45'], '71569', 'openBmMacDetay', '2719320', '62910143', ['1','2','3','4','5'])\">3.05</a> </div> </div> <div style=\"float:left;min-width:50px;width:60px\"> <div class=\"sgoutcome-name\">2.P</div> <div class=\"sgoutcome-value\"> <a class=\"compare-rate-bg-up\" href=\"javascript:openOddsDialog('3', 'Daha Çok Sayı Olacak Periyot', ['1.P','2.P','3.P','4.P','Eşit'], ['3.05','3.14','3.26','2.80','9.45'], '71569', 'openBmMacDetay', '2719320', '62910143', ['1','2','3','4','5'])\">3.14</a> </div> </div> <div style=\"float:left;min-width:50px;width:60px\"> <div class=\"sgoutcome-name\">3.P</div> <div class=\"sgoutcome-value\"> <a class=\"compare-rate-bg-up\" href=\"javascript:openOddsDialog('3', 'Daha Çok Sayı Olacak Periyot', ['1.P','2.P','3.P','4.P','Eşit'], ['3.05','3."
     },
     {
       "aday": {
@@ -2750,24 +1256,138 @@
       },
       "deneme": [
         {
-          "yol": "/Basketbol/Mac/Default.aspx?id=",
-          "uygun": false,
-          "baslik": "Hata",
-          "oranCagrisi": 0
+          "yol": "/Basket-Mac/4422390/satria-muda-tangerank-hawks",
+          "uygun": true,
+          "baslik": "Satria Muda - Tangerank Hawks (14.03.2026) Basketbol Maç Detayı - Endonezya IBL 2026 @ Mackolik.com",
+          "oranCagrisi": 29
         },
         {
-          "yol": "/Basket/Match/Default.aspx?id=",
-          "uygun": false,
-          "baslik": "Hata",
-          "oranCagrisi": 0
+          "yol": "/Basket-Mac/4422390",
+          "hata": "HTTP 404"
         },
         {
-          "yol": "/Match/Default.aspx?id=",
-          "uygun": false,
-          "baslik": "",
-          "oranCagrisi": 0
+          "yol": "/Basket-Mac/4422390/mac",
+          "uygun": true,
+          "baslik": "Satria Muda - Tangerank Hawks (14.03.2026) Basketbol Maç Detayı - Endonezya IBL 2026 @ Mackolik.com",
+          "oranCagrisi": 29
         }
-      ]
+      ],
+      "ms": "92-82",
+      "per": [
+        [
+          19,
+          22
+        ],
+        [
+          22,
+          20
+        ],
+        [
+          23,
+          21
+        ],
+        [
+          28,
+          19
+        ]
+      ],
+      "mbs": "3",
+      "marketler": [
+        "Maç Sonucu (Uzt. Dahil)",
+        "Handikaplı Maç Sonucu (0:14,5)",
+        "Handikaplı Maç Sonucu (0:13,5)",
+        "Handikaplı Maç Sonucu (0:12,5)",
+        "Maç Sonucu Alt/Üst (159,5)",
+        "Maç Sonucu Alt/Üst (160,5)",
+        "Uzatma Oynanır",
+        "Handikaplı 1. Yarı Sonucu (0:7,5)",
+        "Handikaplı 1. Yarı Sonucu (0:6,5)",
+        "1. Yarı Alt/Üst (79,5)",
+        "1. Yarı Alt/Üst (80,5)",
+        "1. Yarı Alt/Üst (81,5)",
+        "Daha Çok Sayı Olacak Periyot"
+      ],
+      "oran": {
+        "Maç Sonucu (Uzt. Dahil)": {
+          "1": "-",
+          "2": "7.00"
+        },
+        "Handikaplı Maç Sonucu (0:14,5)": {
+          "1": "1.64",
+          "2": "1.58"
+        },
+        "Handikaplı Maç Sonucu (0:13,5)": {
+          "1": "1.64",
+          "2": "1.58"
+        },
+        "Handikaplı Maç Sonucu (0:12,5)": {
+          "1": "1.62",
+          "2": "1.61"
+        },
+        "Maç Sonucu Alt/Üst (159,5)": {
+          "Alt": "1.61",
+          "Üst": "1.62"
+        },
+        "Maç Sonucu Alt/Üst (160,5)": {
+          "Alt": "1.64",
+          "Üst": "1.59"
+        },
+        "Uzatma Oynanır": {
+          "Evet": "12.70",
+          "Hayır": "-"
+        },
+        "Handikaplı 1. Yarı Sonucu (0:7,5)": {
+          "1": "1.57",
+          "2": "1.67"
+        },
+        "Handikaplı 1. Yarı Sonucu (0:6,5)": {
+          "1": "1.56",
+          "2": "1.68"
+        },
+        "1. Yarı Alt/Üst (79,5)": {
+          "Alt": "1.67",
+          "Üst": "1.56"
+        },
+        "1. Yarı Alt/Üst (80,5)": {
+          "Alt": "1.60",
+          "Üst": "1.63"
+        },
+        "1. Yarı Alt/Üst (81,5)": {
+          "Alt": "1.56",
+          "Üst": "1.67"
+        },
+        "Daha Çok Sayı Olacak Periyot": {
+          "1.P": "2.75",
+          "2.P": "2.89",
+          "3.P": "3.57",
+          "4.P": "3.08",
+          "Eşit": "9.96"
+        }
+      },
+      "anaAU": {
+        "cizgi": 159.5,
+        "alt": "1.61",
+        "ust": "1.62",
+        "fark": 0.010000000000000009
+      },
+      "iyAU": {
+        "cizgi": 80.5,
+        "alt": "1.60",
+        "ust": "1.63",
+        "fark": 0.029999999999999805
+      },
+      "msOran": {
+        "1": "-",
+        "2": "7.00"
+      },
+      "handikap": {
+        "1": "1.62",
+        "2": "1.61",
+        "ad": "Handikaplı Maç Sonucu (0:12,5)",
+        "evHnd": -12.5,
+        "fark": 0.010000000000000009
+      },
+      "periyotIzi": "224', ['1','2'])\">1.67</a> </div> </div> <div style=\"clear:both\"></div> </div> </div> <div class=\"md\" style=\"border:0;width: 300px\"> <div class=\"detail-title\" style=\"width:auto\"> Daha Çok Sayı Olacak Periyot <span style=\"float:right\">64295&nbsp;&nbsp;<img src=\"http://im.mackolik.com/img5/iddaa/mbs3.png\"></span> </div> <div> <div style=\"float:left;min-width:50px;width:60px\"> <div class=\"sgoutcome-name\">1.P</div> <div class=\"sgoutcome-value\"> <a class=\"compare-rate-bg-up\" href=\"javascript:openOddsDialog('3', 'Daha Çok Sayı Olacak Periyot', ['1.P','2.P','3.P','4.P','Eşit'], ['2.75','2.89','3.57','3.08','9.96'], '64295', 'openBmMacDetay', '2718028', '62656712', ['1','2','3','4','5'])\">2.75</a> </div> </div> <div style=\"float:left;min-width:50px;width:60px\"> <div class=\"sgoutcome-name\">2.P</div> <div class=\"sgoutcome-value\"> <a class=\"compare-rate-bg-up\" href=\"javascript:openOddsDialog('3', 'Daha Çok Sayı Olacak Periyot', ['1.P','2.P','3.P','4.P','Eşit'], ['2.75','2.89','3.57','3.08','9.96'], '64295', 'openBmMacDetay', '2718028', '62656712', ['1','2','3','4','5'])\">2.89</a> </div> </div> <div style=\"float:left;min-width:50px;width:60px\"> <div class=\"sgoutcome-name\">3.P</div> <div class=\"sgoutcome-value\"> <a class=\"compare-rate-bg-up\" href=\"javascript:openOddsDialog('3', 'Daha Çok Sayı Olacak Periyot', ['1.P','2.P','3.P','4.P','Eşit'], ['2.75','2."
     },
     {
       "aday": {
@@ -2783,24 +1403,541 @@
       },
       "deneme": [
         {
-          "yol": "/Basketbol/Mac/Default.aspx?id=",
-          "uygun": false,
-          "baslik": "Hata",
-          "oranCagrisi": 0
+          "yol": "/Basket-Mac/4392095/ehime-orange-vikings-rebnise",
+          "uygun": true,
+          "baslik": "Ehime Orange Vikings - Rebnise (14.03.2026) Basketbol Maç Detayı - Japonya B2 Lig 2025/2026 @ Mackolik.com",
+          "oranCagrisi": 24
         },
         {
-          "yol": "/Basket/Match/Default.aspx?id=",
-          "uygun": false,
-          "baslik": "Hata",
-          "oranCagrisi": 0
+          "yol": "/Basket-Mac/4392095",
+          "hata": "HTTP 404"
         },
         {
-          "yol": "/Match/Default.aspx?id=",
-          "uygun": false,
-          "baslik": "",
-          "oranCagrisi": 0
+          "yol": "/Basket-Mac/4392095/mac",
+          "uygun": true,
+          "baslik": "Ehime Orange Vikings - Rebnise (14.03.2026) Basketbol Maç Detayı - Japonya B2 Lig 2025/2026 @ Mackolik.com",
+          "oranCagrisi": 24
         }
-      ]
+      ],
+      "ms": "100-72",
+      "per": [
+        [
+          23,
+          11
+        ],
+        [
+          33,
+          21
+        ],
+        [
+          21,
+          26
+        ],
+        [
+          23,
+          14
+        ]
+      ],
+      "mbs": "3",
+      "marketler": [
+        "Maç Sonucu (Uzt. Dahil)",
+        "Handikaplı Maç Sonucu (0:7,5)",
+        "Handikaplı Maç Sonucu (0:6,5)",
+        "Handikaplı Maç Sonucu (0:5,5)",
+        "Handikaplı Maç Sonucu (0:4,5)",
+        "Maç Sonucu Alt/Üst (169,5)",
+        "Maç Sonucu Alt/Üst (170,5)",
+        "Uzatma Oynanır",
+        "Handikaplı 1. Yarı Sonucu (0:4,5)",
+        "Handikaplı 1. Yarı Sonucu (0:3,5)",
+        "Handikaplı 1. Yarı Sonucu (0:2,5)",
+        "Handikaplı 1. Yarı Sonucu (0:1,5)"
+      ],
+      "oran": {
+        "Maç Sonucu (Uzt. Dahil)": {
+          "1": "1.14",
+          "2": "2.76"
+        },
+        "Handikaplı Maç Sonucu (0:7,5)": {
+          "1": "1.63",
+          "2": "1.60"
+        },
+        "Handikaplı Maç Sonucu (0:6,5)": {
+          "1": "1.65",
+          "2": "1.58"
+        },
+        "Handikaplı Maç Sonucu (0:5,5)": {
+          "1": "1.59",
+          "2": "1.64"
+        },
+        "Handikaplı Maç Sonucu (0:4,5)": {
+          "1": "1.55",
+          "2": "1.68"
+        },
+        "Maç Sonucu Alt/Üst (169,5)": {
+          "Alt": "1.64",
+          "Üst": "1.59"
+        },
+        "Maç Sonucu Alt/Üst (170,5)": {
+          "Alt": "1.64",
+          "Üst": "1.59"
+        },
+        "Uzatma Oynanır": {
+          "Evet": "9.58",
+          "Hayır": "-"
+        },
+        "Handikaplı 1. Yarı Sonucu (0:4,5)": {
+          "1": "1.67",
+          "2": "1.56"
+        },
+        "Handikaplı 1. Yarı Sonucu (0:3,5)": {
+          "1": "1.68",
+          "2": "1.56"
+        },
+        "Handikaplı 1. Yarı Sonucu (0:2,5)": {
+          "1": "1.58",
+          "2": "1.64"
+        },
+        "Handikaplı 1. Yarı Sonucu (0:1,5)": {
+          "1": "1.56",
+          "2": "1.67"
+        }
+      },
+      "anaAU": {
+        "cizgi": 169.5,
+        "alt": "1.64",
+        "ust": "1.59",
+        "fark": 0.04999999999999982
+      },
+      "iyAU": null,
+      "msOran": {
+        "1": "1.14",
+        "2": "2.76"
+      },
+      "handikap": {
+        "1": "1.63",
+        "2": "1.60",
+        "ad": "Handikaplı Maç Sonucu (0:7,5)",
+        "evHnd": -7.5,
+        "fark": 0.029999999999999805
+      },
+      "periyotIzi": ""
+    },
+    {
+      "aday": {
+        "id": "4350457",
+        "lig": "Türkiye - Türkiye Sigorta Basketbol Süper Ligi",
+        "ligHam": "Türkiye | Türkiye Sigorta Basketbol Süper Ligi | 2025/2026 |  | BSL",
+        "ev": "Bursaspor Basketbol",
+        "dep": "Aliağa Petkim Spor",
+        "saat": "13:00",
+        "kod": "2440192",
+        "ms": "76-74",
+        "iy": "39-35"
+      },
+      "deneme": [
+        {
+          "yol": "/Basket-Mac/4350457/bursaspor-basketbol-aliaga-petkim-spor",
+          "uygun": true,
+          "baslik": "Bursaspor Basketbol - Aliağa Petkim Spor (15.11.2025) Basketbol Maç Detayı - Türkiye Türkiye Sigorta Basketbol Süper Ligi 2025/2026 @ Mackolik.com",
+          "oranCagrisi": 6
+        },
+        {
+          "yol": "/Basket-Mac/4350457",
+          "hata": "HTTP 404"
+        },
+        {
+          "yol": "/Basket-Mac/4350457/mac",
+          "uygun": true,
+          "baslik": "Bursaspor Basketbol - Aliağa Petkim Spor (15.11.2025) Basketbol Maç Detayı - Türkiye Türkiye Sigorta Basketbol Süper Ligi 2025/2026 @ Mackolik.com",
+          "oranCagrisi": 6
+        }
+      ],
+      "ms": "76-74",
+      "per": [
+        [
+          22,
+          18
+        ],
+        [
+          17,
+          17
+        ],
+        [
+          22,
+          19
+        ],
+        [
+          15,
+          20
+        ]
+      ],
+      "mbs": "1",
+      "marketler": [
+        "Maç Sonucu (Uzt. Dahil)",
+        "Handikaplı Maç Sonucu (0:3,5)",
+        "Maç Sonucu Alt/Üst (164,5)"
+      ],
+      "oran": {
+        "Maç Sonucu (Uzt. Dahil)": {
+          "1": "1.38",
+          "2": "2.00"
+        },
+        "Handikaplı Maç Sonucu (0:3,5)": {
+          "1": "1.65",
+          "2": "1.61"
+        },
+        "Maç Sonucu Alt/Üst (164,5)": {
+          "Alt": "1.60",
+          "Üst": "1.66"
+        }
+      },
+      "anaAU": {
+        "cizgi": 164.5,
+        "alt": "1.60",
+        "ust": "1.66",
+        "fark": 0.05999999999999983
+      },
+      "iyAU": null,
+      "msOran": {
+        "1": "1.38",
+        "2": "2.00"
+      },
+      "handikap": {
+        "1": "1.65",
+        "2": "1.61",
+        "ad": "Handikaplı Maç Sonucu (0:3,5)",
+        "evHnd": -3.5,
+        "fark": 0.039999999999999813
+      },
+      "periyotIzi": ""
+    },
+    {
+      "aday": {
+        "id": "4387710",
+        "lig": "Yunanistan - Basket Ligi",
+        "ligHam": "Yunanistan | Basket Ligi | 2025/2026 |  | YUN",
+        "ev": "Mykonos",
+        "dep": "Panionios",
+        "saat": "17:00",
+        "kod": "2439931",
+        "ms": "86-77",
+        "iy": "42-40"
+      },
+      "deneme": [
+        {
+          "yol": "/Basket-Mac/4387710/mykonos-panionios",
+          "uygun": true,
+          "baslik": "Mykonos - Panionios (15.11.2025) Basketbol Maç Detayı - Yunanistan Basket Ligi 2025/2026 @ Mackolik.com",
+          "oranCagrisi": 16
+        },
+        {
+          "yol": "/Basket-Mac/4387710",
+          "hata": "HTTP 404"
+        },
+        {
+          "yol": "/Basket-Mac/4387710/mac",
+          "uygun": true,
+          "baslik": "Mykonos - Panionios (15.11.2025) Basketbol Maç Detayı - Yunanistan Basket Ligi 2025/2026 @ Mackolik.com",
+          "oranCagrisi": 16
+        }
+      ],
+      "ms": "86-77",
+      "per": [
+        [
+          25,
+          14
+        ],
+        [
+          17,
+          26
+        ],
+        [
+          16,
+          19
+        ],
+        [
+          28,
+          18
+        ]
+      ],
+      "mbs": "2",
+      "marketler": [
+        "Maç Sonucu (Uzt. Dahil)",
+        "Handikaplı Maç Sonucu (0:5,5)",
+        "Handikaplı Maç Sonucu (0:4,5)",
+        "Handikaplı Maç Sonucu (0:3,5)",
+        "Handikaplı Maç Sonucu (0:2,5)",
+        "Maç Sonucu Alt/Üst (157,5)",
+        "Maç Sonucu Alt/Üst (158,5)",
+        "Maç Sonucu Alt/Üst (159,5)"
+      ],
+      "oran": {
+        "Maç Sonucu (Uzt. Dahil)": {
+          "1": "1.45",
+          "2": "1.87"
+        },
+        "Handikaplı Maç Sonucu (0:5,5)": {
+          "1": "1.69",
+          "2": "1.58"
+        },
+        "Handikaplı Maç Sonucu (0:4,5)": {
+          "1": "1.68",
+          "2": "1.59"
+        },
+        "Handikaplı Maç Sonucu (0:3,5)": {
+          "1": "1.68",
+          "2": "1.59"
+        },
+        "Handikaplı Maç Sonucu (0:2,5)": {
+          "1": "1.62",
+          "2": "1.65"
+        },
+        "Maç Sonucu Alt/Üst (157,5)": {
+          "Alt": "1.65",
+          "Üst": "1.62"
+        },
+        "Maç Sonucu Alt/Üst (158,5)": {
+          "Alt": "1.64",
+          "Üst": "1.63"
+        },
+        "Maç Sonucu Alt/Üst (159,5)": {
+          "Alt": "1.64",
+          "Üst": "1.63"
+        }
+      },
+      "anaAU": {
+        "cizgi": 158.5,
+        "alt": "1.64",
+        "ust": "1.63",
+        "fark": 0.010000000000000009
+      },
+      "iyAU": null,
+      "msOran": {
+        "1": "1.45",
+        "2": "1.87"
+      },
+      "handikap": {
+        "1": "1.62",
+        "2": "1.65",
+        "ad": "Handikaplı Maç Sonucu (0:2,5)",
+        "evHnd": -2.5,
+        "fark": 0.029999999999999805
+      },
+      "periyotIzi": ""
+    },
+    {
+      "aday": {
+        "id": "4381673",
+        "lig": "Slovenya - Nova KBM Ligi",
+        "ligHam": "Slovenya | Nova KBM Ligi | 2025/2026 |  | SLO",
+        "ev": "Zlatorog Lasko",
+        "dep": "Triglav Elektro",
+        "saat": "21:30",
+        "kod": "2437953",
+        "ms": "91-74",
+        "iy": "44-34"
+      },
+      "deneme": [
+        {
+          "yol": "/Basket-Mac/4381673/zlatorog-lasko-triglav-elektro",
+          "uygun": true,
+          "baslik": "Zlatorog Lasko - Triglav Elektro (15.11.2025) Basketbol Maç Detayı - Slovenya Nova KBM Ligi 2025/2026 @ Mackolik.com",
+          "oranCagrisi": 12
+        },
+        {
+          "yol": "/Basket-Mac/4381673",
+          "hata": "HTTP 404"
+        },
+        {
+          "yol": "/Basket-Mac/4381673/mac",
+          "uygun": true,
+          "baslik": "Zlatorog Lasko - Triglav Elektro (15.11.2025) Basketbol Maç Detayı - Slovenya Nova KBM Ligi 2025/2026 @ Mackolik.com",
+          "oranCagrisi": 12
+        }
+      ],
+      "ms": "91-74",
+      "per": [
+        [
+          22,
+          17
+        ],
+        [
+          22,
+          17
+        ],
+        [
+          24,
+          19
+        ],
+        [
+          23,
+          21
+        ]
+      ],
+      "mbs": "3",
+      "marketler": [
+        "Maç Sonucu (Uzt. Dahil)",
+        "Handikaplı Maç Sonucu (4,5:0)",
+        "Handikaplı Maç Sonucu (5,5:0)",
+        "Handikaplı Maç Sonucu (6,5:0)",
+        "Maç Sonucu Alt/Üst (166,5)",
+        "Maç Sonucu Alt/Üst (167,5)"
+      ],
+      "oran": {
+        "Maç Sonucu (Uzt. Dahil)": {
+          "1": "2.47",
+          "2": "1.22"
+        },
+        "Handikaplı Maç Sonucu (4,5:0)": {
+          "1": "1.68",
+          "2": "1.59"
+        },
+        "Handikaplı Maç Sonucu (5,5:0)": {
+          "1": "1.63",
+          "2": "1.64"
+        },
+        "Handikaplı Maç Sonucu (6,5:0)": {
+          "1": "1.59",
+          "2": "1.68"
+        },
+        "Maç Sonucu Alt/Üst (166,5)": {
+          "Alt": "1.66",
+          "Üst": "1.60"
+        },
+        "Maç Sonucu Alt/Üst (167,5)": {
+          "Alt": "1.59",
+          "Üst": "1.67"
+        }
+      },
+      "anaAU": {
+        "cizgi": 166.5,
+        "alt": "1.66",
+        "ust": "1.60",
+        "fark": 0.05999999999999983
+      },
+      "iyAU": null,
+      "msOran": {
+        "1": "2.47",
+        "2": "1.22"
+      },
+      "handikap": {
+        "1": "1.63",
+        "2": "1.64",
+        "ad": "Handikaplı Maç Sonucu (5,5:0)",
+        "evHnd": 5.5,
+        "fark": 0.010000000000000009
+      },
+      "periyotIzi": ""
+    },
+    {
+      "aday": {
+        "id": "4391875",
+        "lig": "Japonya - B2 Lig",
+        "ligHam": "Japonya | B2 Lig | 2025/2026 |  | JAP2",
+        "ev": "Yamagata Wyverns",
+        "dep": "Fukui Blowwinds",
+        "saat": "09:05",
+        "kod": "2439500",
+        "ms": "55-77",
+        "iy": "26-38"
+      },
+      "deneme": [
+        {
+          "yol": "/Basket-Mac/4391875/yamagata-wyverns-fukui-blowwinds",
+          "uygun": true,
+          "baslik": "Yamagata Wyverns - Fukui Blowwinds (15.11.2025) Basketbol Maç Detayı - Japonya B2 Lig 2025/2026 @ Mackolik.com",
+          "oranCagrisi": 14
+        },
+        {
+          "yol": "/Basket-Mac/4391875",
+          "hata": "HTTP 404"
+        },
+        {
+          "yol": "/Basket-Mac/4391875/mac",
+          "uygun": true,
+          "baslik": "Yamagata Wyverns - Fukui Blowwinds (15.11.2025) Basketbol Maç Detayı - Japonya B2 Lig 2025/2026 @ Mackolik.com",
+          "oranCagrisi": 14
+        }
+      ],
+      "ms": "55-77",
+      "per": [
+        [
+          14,
+          15
+        ],
+        [
+          12,
+          23
+        ],
+        [
+          15,
+          15
+        ],
+        [
+          14,
+          24
+        ]
+      ],
+      "mbs": "3",
+      "marketler": [
+        "Maç Sonucu (Uzt. Dahil)",
+        "Handikaplı Maç Sonucu (7,5:0)",
+        "Maç Sonucu Alt/Üst (164,5)",
+        "Maç Sonucu Alt/Üst (165,5)",
+        "Maç Sonucu Alt/Üst (166,5)",
+        "Uzatma Oynanır",
+        "Handikaplı 1. Yarı Sonucu (3,5:0)"
+      ],
+      "oran": {
+        "Maç Sonucu (Uzt. Dahil)": {
+          "1": "3.05",
+          "2": "1.11"
+        },
+        "Handikaplı Maç Sonucu (7,5:0)": {
+          "1": "1.59",
+          "2": "1.68"
+        },
+        "Maç Sonucu Alt/Üst (164,5)": {
+          "Alt": "1.62",
+          "Üst": "1.65"
+        },
+        "Maç Sonucu Alt/Üst (165,5)": {
+          "Alt": "1.64",
+          "Üst": "1.63"
+        },
+        "Maç Sonucu Alt/Üst (166,5)": {
+          "Alt": "1.60",
+          "Üst": "1.66"
+        },
+        "Uzatma Oynanır": {
+          "Evet": "10.35",
+          "Hayır": "-"
+        },
+        "Handikaplı 1. Yarı Sonucu (3,5:0)": {
+          "1": "1.65",
+          "2": "1.61"
+        }
+      },
+      "anaAU": {
+        "cizgi": 165.5,
+        "alt": "1.64",
+        "ust": "1.63",
+        "fark": 0.010000000000000009
+      },
+      "iyAU": null,
+      "msOran": {
+        "1": "3.05",
+        "2": "1.11"
+      },
+      "handikap": {
+        "1": "1.59",
+        "2": "1.68",
+        "ad": "Handikaplı Maç Sonucu (7,5:0)",
+        "evHnd": 7.5,
+        "fark": 0.08999999999999986
+      },
+      "periyotIzi": ""
     },
     {
       "aday": {
@@ -2816,24 +1953,200 @@
       },
       "deneme": [
         {
-          "yol": "/Basketbol/Mac/Default.aspx?id=",
-          "uygun": false,
-          "baslik": "Hata",
-          "oranCagrisi": 0
+          "yol": "/Basket-Mac/3984932/bahcesehir-koleji-turk-telekom",
+          "uygun": true,
+          "baslik": "Bahçeşehir Koleji - Türk Telekom (10.02.2024) Basketbol Maç Detayı - Türkiye Türkiye Sigorta Basketbol Süper Ligi 2023/2024 @ Mackolik.com",
+          "oranCagrisi": 60
         },
         {
-          "yol": "/Basket/Match/Default.aspx?id=",
-          "uygun": false,
-          "baslik": "Hata",
-          "oranCagrisi": 0
+          "yol": "/Basket-Mac/3984932",
+          "hata": "HTTP 404"
         },
         {
-          "yol": "/Match/Default.aspx?id=",
-          "uygun": false,
-          "baslik": "",
-          "oranCagrisi": 0
+          "yol": "/Basket-Mac/3984932/mac",
+          "uygun": true,
+          "baslik": "Bahçeşehir Koleji - Türk Telekom (10.02.2024) Basketbol Maç Detayı - Türkiye Türkiye Sigorta Basketbol Süper Ligi 2023/2024 @ Mackolik.com",
+          "oranCagrisi": 60
         }
-      ]
+      ],
+      "ms": "81-81",
+      "per": null,
+      "mbs": "1",
+      "marketler": [
+        "Maç Sonucu (Uzt. Dahil)",
+        "Handikaplı Maç Sonucu (0:5,5)",
+        "Handikaplı Maç Sonucu (0:4,5)",
+        "Handikaplı Maç Sonucu (0:3,5)",
+        "Maç Sonucu Alt/Üst (161,5)",
+        "Maç Sonucu Alt/Üst (162,5)",
+        "Maç Sonucu Alt/Üst (163,5)",
+        "Maç Sonucu Alt/Üst (164,5)",
+        "Maç Sonucu Alt/Üst (165,5)",
+        "Maç Sonucu Alt/Üst (166,5)",
+        "Maç Sonucu Alt/Üst (167,5)",
+        "1. Periyot Sonucu",
+        "1. Yarı Sonucu",
+        "Handikaplı 1. Yarı Sonucu (0:2,5)",
+        "Handikaplı 1. Yarı Sonucu (0:1,5)",
+        "Handikaplı 1. Yarı Sonucu (0:0,5)",
+        "1. Yarı Alt/Üst (80,5)",
+        "1. Yarı Alt/Üst (81,5)",
+        "1. Yarı Alt/Üst (82,5)",
+        "1. Yarı Alt/Üst (83,5)",
+        "Evsahibi Alt/Üst (82,5)",
+        "Evsahibi Alt/Üst (83,5)",
+        "Evsahibi Alt/Üst (84,5)",
+        "Evsahibi Alt/Üst (85,5)",
+        "Deplasman Alt/Üst (78,5)",
+        "Deplasman Alt/Üst (79,5)",
+        "Deplasman Alt/Üst (80,5)",
+        "Deplasman Alt/Üst (81,5)",
+        "Deplasman Alt/Üst (82,5)"
+      ],
+      "oran": {
+        "Maç Sonucu (Uzt. Dahil)": {
+          "1": "1.40",
+          "2": "2.08"
+        },
+        "Handikaplı Maç Sonucu (0:5,5)": {
+          "1": "1.88",
+          "2": "1.50"
+        },
+        "Handikaplı Maç Sonucu (0:4,5)": {
+          "1": "1.74",
+          "2": "1.60"
+        },
+        "Handikaplı Maç Sonucu (0:3,5)": {
+          "1": "1.61",
+          "2": "1.73"
+        },
+        "Maç Sonucu Alt/Üst (161,5)": {
+          "Alt": "1.80",
+          "Üst": "1.56"
+        },
+        "Maç Sonucu Alt/Üst (162,5)": {
+          "Alt": "1.71",
+          "Üst": "1.63"
+        },
+        "Maç Sonucu Alt/Üst (163,5)": {
+          "Alt": "1.63",
+          "Üst": "1.70"
+        },
+        "Maç Sonucu Alt/Üst (164,5)": {
+          "Alt": "1.69",
+          "Üst": "1.65"
+        },
+        "Maç Sonucu Alt/Üst (165,5)": {
+          "Alt": "1.71",
+          "Üst": "1.63"
+        },
+        "Maç Sonucu Alt/Üst (166,5)": {
+          "Alt": "1.63",
+          "Üst": "1.71"
+        },
+        "Maç Sonucu Alt/Üst (167,5)": {
+          "Alt": "1.56",
+          "Üst": "1.79"
+        },
+        "1. Periyot Sonucu": {
+          "1": "1.60",
+          "2": "1.98",
+          "X": "13.00"
+        },
+        "1. Yarı Sonucu": {
+          "1": "1.52",
+          "2": "2.05",
+          "X": "13.00"
+        },
+        "Handikaplı 1. Yarı Sonucu (0:2,5)": {
+          "1": "1.78",
+          "2": "1.57"
+        },
+        "Handikaplı 1. Yarı Sonucu (0:1,5)": {
+          "1": "1.64",
+          "2": "1.70"
+        },
+        "Handikaplı 1. Yarı Sonucu (0:0,5)": {
+          "1": "1.52",
+          "2": "1.86"
+        },
+        "1. Yarı Alt/Üst (80,5)": {
+          "Alt": "1.77",
+          "Üst": "1.57"
+        },
+        "1. Yarı Alt/Üst (81,5)": {
+          "Alt": "1.65",
+          "Üst": "1.69"
+        },
+        "1. Yarı Alt/Üst (82,5)": {
+          "Alt": "1.54",
+          "Üst": "1.83"
+        },
+        "1. Yarı Alt/Üst (83,5)": {
+          "Alt": "1.53",
+          "Üst": "1.84"
+        },
+        "Evsahibi Alt/Üst (82,5)": {
+          "Alt": "1.90",
+          "Üst": "1.49"
+        },
+        "Evsahibi Alt/Üst (83,5)": {
+          "Alt": "1.85",
+          "Üst": "1.52"
+        },
+        "Evsahibi Alt/Üst (84,5)": {
+          "Alt": "1.70",
+          "Üst": "1.64"
+        },
+        "Evsahibi Alt/Üst (85,5)": {
+          "Alt": "1.57",
+          "Üst": "1.78"
+        },
+        "Deplasman Alt/Üst (78,5)": {
+          "Alt": "1.87",
+          "Üst": "1.50"
+        },
+        "Deplasman Alt/Üst (79,5)": {
+          "Alt": "1.90",
+          "Üst": "1.49"
+        },
+        "Deplasman Alt/Üst (80,5)": {
+          "Alt": "1.80",
+          "Üst": "1.55"
+        },
+        "Deplasman Alt/Üst (81,5)": {
+          "Alt": "1.66",
+          "Üst": "1.68"
+        },
+        "Deplasman Alt/Üst (82,5)": {
+          "Alt": "1.53",
+          "Üst": "1.83"
+        }
+      },
+      "anaAU": {
+        "cizgi": 164.5,
+        "alt": "1.69",
+        "ust": "1.65",
+        "fark": 0.040000000000000036
+      },
+      "iyAU": {
+        "cizgi": 81.5,
+        "alt": "1.65",
+        "ust": "1.69",
+        "fark": 0.040000000000000036
+      },
+      "msOran": {
+        "1": "1.40",
+        "2": "2.08"
+      },
+      "handikap": {
+        "1": "1.61",
+        "2": "1.73",
+        "ad": "Handikaplı Maç Sonucu (0:3,5)",
+        "evHnd": -3.5,
+        "fark": 0.11999999999999988
+      },
+      "periyotIzi": " '1544266', '23195055', ['1','2'])\">1.79</a> </div> </div> <div style=\"clear:both\"></div> </div> </div> <div class=\"md\" style=\"border:0;width: 300px\"> <div class=\"detail-title\" style=\"width:auto\"> 1. Periyot Sonucu <span style=\"float:right\">21298&nbsp;&nbsp;<img src=\"http://im.mackolik.com/img5/iddaa/mbs1.png\"></span> </div> <div> <div style=\"float:left;min-width:50px;width:100px\"> <div class=\"sgoutcome-name\">1</div> <div class=\"sgoutcome-value\"> <a class=\"compare-rate-bg-up\" href=\"javascript:openOddsDialog('1', '1. Periyot Sonucu', ['1','X','2'], ['1.60','13.00','1.98'], '21298', 'openBmMacDetay', '1544266', '23190283', ['1','2','3'])\">1.60</a> </div> </div> <div style=\"float:left;min-width:50px;width:100px\"> <div class=\"sgoutcome-name\">X</div> <div class=\"sgoutcome-value\"> <a class=\"compare-rate-bg-up\" href=\"javascript:openOddsDialog('1', '1. Periyot Sonucu', ['1','X','2'], ['1.60','13.00','1.98'], '21298', 'openBmMacDetay', '1544266', '23190283', ['1','2','3'])\">13.00</a> </div> </div> <div style=\"float:left;min-width:50px;width:100px\"> <div class=\"sgoutcome-name\">2</div> <div class=\"sgoutcome-value\"> <a class=\"compare-rate-bg-up\" href=\"javascript:openOddsDialog('1', '1. Periyot Sonucu', ['1','X','2'], ['1.60','13.00','1.98'], '21298', 'openBmMacDetay', '1544266', '23190283', ['1','2','3'])\">1.98</a> </div> <"
     },
     {
       "aday": {
@@ -2849,24 +2162,281 @@
       },
       "deneme": [
         {
-          "yol": "/Basketbol/Mac/Default.aspx?id=",
-          "uygun": false,
-          "baslik": "Hata",
-          "oranCagrisi": 0
+          "yol": "/Basket-Mac/3989716/perth-wildcats-cairns-taipans",
+          "uygun": true,
+          "baslik": "Perth Wildcats - Cairns Taipans (10.02.2024) Basketbol Maç Detayı - Avustralya NBL 2023/2024 @ Mackolik.com",
+          "oranCagrisi": 97
         },
         {
-          "yol": "/Basket/Match/Default.aspx?id=",
-          "uygun": false,
-          "baslik": "Hata",
-          "oranCagrisi": 0
+          "yol": "/Basket-Mac/3989716",
+          "hata": "HTTP 404"
         },
         {
-          "yol": "/Match/Default.aspx?id=",
-          "uygun": false,
-          "baslik": "",
-          "oranCagrisi": 0
+          "yol": "/Basket-Mac/3989716/mac",
+          "uygun": true,
+          "baslik": "Perth Wildcats - Cairns Taipans (10.02.2024) Basketbol Maç Detayı - Avustralya NBL 2023/2024 @ Mackolik.com",
+          "oranCagrisi": 97
         }
-      ]
+      ],
+      "ms": "117-88",
+      "per": [
+        [
+          30,
+          30
+        ],
+        [
+          27,
+          27
+        ],
+        [
+          22,
+          15
+        ],
+        [
+          38,
+          16
+        ]
+      ],
+      "mbs": "3",
+      "marketler": [
+        "Maç Sonucu (Uzt. Dahil)",
+        "Handikaplı Maç Sonucu (0:10,5)",
+        "Handikaplı Maç Sonucu (0:9,5)",
+        "Handikaplı Maç Sonucu (0:8,5)",
+        "Handikaplı Maç Sonucu (0:7,5)",
+        "Handikaplı Maç Sonucu (0:6,5)",
+        "İlk Yarı/Maç Sonucu",
+        "Maç Sonucu Alt/Üst (181,5)",
+        "Maç Sonucu Alt/Üst (182,5)",
+        "Maç Sonucu Alt/Üst (183,5)",
+        "Maç Sonucu Alt/Üst (184,5)",
+        "Maç Sonucu Alt/Üst (185,5)",
+        "Maç Sonucu Alt/Üst (186,5)",
+        "Maç Sonucu Alt/Üst (187,5)",
+        "Maç Sonucu Alt/Üst (188,5)",
+        "Maç Sonucu & Alt/Üst (182,5)",
+        "Maç Sonucu & Alt/Üst (184,5)",
+        "Maç Sonucu & Alt/Üst (185,5)",
+        "Maç Sonucu & Alt/Üst (186,5)",
+        "Maç Sonucu & Alt/Üst (187,5)",
+        "Uzatma Oynanır",
+        "1. Periyot Sonucu",
+        "1. Yarı Sonucu",
+        "Handikaplı 1. Yarı Sonucu (0:4,5)",
+        "Handikaplı 1. Yarı Sonucu (0:3,5)",
+        "1. Yarı Alt/Üst (92,5)",
+        "1. Yarı Alt/Üst (93,5)",
+        "1. Yarı Alt/Üst (94,5)",
+        "1. Yarı Alt/Üst (95,5)",
+        "Evsahibi Alt/Üst (94,5)",
+        "Evsahibi Alt/Üst (95,5)",
+        "Evsahibi Alt/Üst (96,5)",
+        "Evsahibi Alt/Üst (97,5)",
+        "Evsahibi Alt/Üst (98,5)",
+        "Deplasman Alt/Üst (87,5)",
+        "Deplasman Alt/Üst (88,5)",
+        "Deplasman Alt/Üst (89,5)",
+        "Daha Çok Sayı Olacak Periyot"
+      ],
+      "oran": {
+        "Maç Sonucu (Uzt. Dahil)": {
+          "1": "1.09",
+          "2": "3.54"
+        },
+        "Handikaplı Maç Sonucu (0:10,5)": {
+          "1": "1.87",
+          "2": "1.51"
+        },
+        "Handikaplı Maç Sonucu (0:9,5)": {
+          "1": "1.74",
+          "2": "1.60"
+        },
+        "Handikaplı Maç Sonucu (0:8,5)": {
+          "1": "1.63",
+          "2": "1.71"
+        },
+        "Handikaplı Maç Sonucu (0:7,5)": {
+          "1": "1.52",
+          "2": "1.86"
+        },
+        "Handikaplı Maç Sonucu (0:6,5)": {
+          "1": "1.55",
+          "2": "1.80"
+        },
+        "İlk Yarı/Maç Sonucu": {
+          "1/1": "1.31",
+          "1/X": "31.00",
+          "1/2": "11.45",
+          "X/1": "26.50",
+          "X/X": "130",
+          "X/2": "70",
+          "2/1": "5.00",
+          "2/X": "32.00",
+          "2/2": "4.68"
+        },
+        "Maç Sonucu Alt/Üst (181,5)": {
+          "Alt": "1.75",
+          "Üst": "1.60"
+        },
+        "Maç Sonucu Alt/Üst (182,5)": {
+          "Alt": "1.67",
+          "Üst": "1.67"
+        },
+        "Maç Sonucu Alt/Üst (183,5)": {
+          "Alt": "1.79",
+          "Üst": "1.56"
+        },
+        "Maç Sonucu Alt/Üst (184,5)": {
+          "Alt": "1.77",
+          "Üst": "1.58"
+        },
+        "Maç Sonucu Alt/Üst (185,5)": {
+          "Alt": "1.77",
+          "Üst": "1.58"
+        },
+        "Maç Sonucu Alt/Üst (186,5)": {
+          "Alt": "1.73",
+          "Üst": "1.61"
+        },
+        "Maç Sonucu Alt/Üst (187,5)": {
+          "Alt": "1.65",
+          "Üst": "1.69"
+        },
+        "Maç Sonucu Alt/Üst (188,5)": {
+          "Alt": "1.58",
+          "Üst": "1.77"
+        },
+        "Maç Sonucu & Alt/Üst (182,5)": {
+          "1 ve Alt": "2.08",
+          "2 ve Alt": "5.46",
+          "1 ve Üst": "2.08",
+          "2 ve Üst": "5.46"
+        },
+        "Maç Sonucu & Alt/Üst (184,5)": {
+          "1 ve Alt": "2.01",
+          "2 ve Alt": "6.53",
+          "1 ve Üst": "1.94",
+          "2 ve Üst": "6.29"
+        },
+        "Maç Sonucu & Alt/Üst (185,5)": {
+          "1 ve Alt": "1.99",
+          "2 ve Alt": "6.52",
+          "1 ve Üst": "1.95",
+          "2 ve Üst": "6.38"
+        },
+        "Maç Sonucu & Alt/Üst (186,5)": {
+          "1 ve Alt": "2.00",
+          "2 ve Alt": "6.47",
+          "1 ve Üst": "1.95",
+          "2 ve Üst": "6.33"
+        },
+        "Maç Sonucu & Alt/Üst (187,5)": {
+          "1 ve Alt": "1.95",
+          "2 ve Alt": "6.32",
+          "1 ve Üst": "2.00",
+          "2 ve Üst": "6.48"
+        },
+        "Uzatma Oynanır": {
+          "Evet": "12.90"
+        },
+        "1. Periyot Sonucu": {
+          "1": "1.41",
+          "2": "2.36",
+          "X": "13.00"
+        },
+        "1. Yarı Sonucu": {
+          "1": "1.27",
+          "2": "2.74",
+          "X": "13.00"
+        },
+        "Handikaplı 1. Yarı Sonucu (0:4,5)": {
+          "1": "1.63",
+          "2": "1.70"
+        },
+        "Handikaplı 1. Yarı Sonucu (0:3,5)": {
+          "1": "1.62",
+          "2": "1.72"
+        },
+        "1. Yarı Alt/Üst (92,5)": {
+          "Alt": "1.72",
+          "Üst": "1.62"
+        },
+        "1. Yarı Alt/Üst (93,5)": {
+          "Alt": "1.70",
+          "Üst": "1.64"
+        },
+        "1. Yarı Alt/Üst (94,5)": {
+          "Alt": "1.65",
+          "Üst": "1.69"
+        },
+        "1. Yarı Alt/Üst (95,5)": {
+          "Alt": "1.64",
+          "Üst": "1.70"
+        },
+        "Evsahibi Alt/Üst (94,5)": {
+          "Alt": "1.73",
+          "Üst": "1.61"
+        },
+        "Evsahibi Alt/Üst (95,5)": {
+          "Alt": "1.73",
+          "Üst": "1.61"
+        },
+        "Evsahibi Alt/Üst (96,5)": {
+          "Alt": "1.73",
+          "Üst": "1.61"
+        },
+        "Evsahibi Alt/Üst (97,5)": {
+          "Alt": "1.72",
+          "Üst": "1.62"
+        },
+        "Evsahibi Alt/Üst (98,5)": {
+          "Alt": "1.62",
+          "Üst": "1.72"
+        },
+        "Deplasman Alt/Üst (87,5)": {
+          "Alt": "1.74",
+          "Üst": "1.60"
+        },
+        "Deplasman Alt/Üst (88,5)": {
+          "Alt": "1.73",
+          "Üst": "1.61"
+        },
+        "Deplasman Alt/Üst (89,5)": {
+          "Alt": "1.62",
+          "Üst": "1.72"
+        },
+        "Daha Çok Sayı Olacak Periyot": {
+          "1.P": "2.65",
+          "2.P": "2.62",
+          "3.P": "4.13",
+          "4.P": "3.44",
+          "Eşit": "10.95"
+        }
+      },
+      "anaAU": {
+        "cizgi": 182.5,
+        "alt": "1.67",
+        "ust": "1.67",
+        "fark": 0
+      },
+      "iyAU": {
+        "cizgi": 94.5,
+        "alt": "1.65",
+        "ust": "1.69",
+        "fark": 0.040000000000000036
+      },
+      "msOran": {
+        "1": "1.09",
+        "2": "3.54"
+      },
+      "handikap": {
+        "1": "1.63",
+        "2": "1.71",
+        "ad": "Handikaplı Maç Sonucu (0:8,5)",
+        "evHnd": -8.5,
+        "fark": 0.08000000000000007
+      },
+      "periyotIzi": "y', '1493577', '23098922', ['1'])\">12.90</a> </div> </div> <div style=\"clear:both\"></div> </div> </div> <div class=\"md\" style=\"border:0;width: 300px\"> <div class=\"detail-title\" style=\"width:auto\"> 1. Periyot Sonucu <span style=\"float:right\">07391&nbsp;&nbsp;<img src=\"http://im.mackolik.com/img5/iddaa/mbs3.png\"></span> </div> <div> <div style=\"float:left;min-width:50px;width:100px\"> <div class=\"sgoutcome-name\">1</div> <div class=\"sgoutcome-value\"> <a class=\"compare-rate-bg-up\" href=\"javascript:openOddsDialog('3', '1. Periyot Sonucu', ['1','X','2'], ['1.41','13.00','2.36'], '07391', 'openBmMacDetay', '1493577', '23098933', ['1','2','3'])\">1.41</a> </div> </div> <div style=\"float:left;min-width:50px;width:100px\"> <div class=\"sgoutcome-name\">X</div> <div class=\"sgoutcome-value\"> <a class=\"compare-rate-bg-up\" href=\"javascript:openOddsDialog('3', '1. Periyot Sonucu', ['1','X','2'], ['1.41','13.00','2.36'], '07391', 'openBmMacDetay', '1493577', '23098933', ['1','2','3'])\">13.00</a> </div> </div> <div style=\"float:left;min-width:50px;width:100px\"> <div class=\"sgoutcome-name\">2</div> <div class=\"sgoutcome-value\"> <a class=\"compare-rate-bg-up\" href=\"javascript:openOddsDialog('3', '1. Periyot Sonucu', ['1','X','2'], ['1.41','13.00','2.36'], '07391', 'openBmMacDetay', '1493577', '23098933', ['1','2','3'])\">2.36</a> </div> <"
     },
     {
       "aday": {
@@ -2882,24 +2452,167 @@
       },
       "deneme": [
         {
-          "yol": "/Basketbol/Mac/Default.aspx?id=",
-          "uygun": false,
-          "baslik": "Hata",
-          "oranCagrisi": 0
+          "yol": "/Basket-Mac/4039696/kyoto-hannaryz-diamond-dolphins",
+          "uygun": true,
+          "baslik": "Kyoto Hannaryz - Diamond Dolphins (10.02.2024) Basketbol Maç Detayı - Japonya B1 Lig 2023/2024 @ Mackolik.com",
+          "oranCagrisi": 48
         },
         {
-          "yol": "/Basket/Match/Default.aspx?id=",
-          "uygun": false,
-          "baslik": "Hata",
-          "oranCagrisi": 0
+          "yol": "/Basket-Mac/4039696",
+          "hata": "HTTP 404"
         },
         {
-          "yol": "/Match/Default.aspx?id=",
-          "uygun": false,
-          "baslik": "",
-          "oranCagrisi": 0
+          "yol": "/Basket-Mac/4039696/mac",
+          "uygun": true,
+          "baslik": "Kyoto Hannaryz - Diamond Dolphins (10.02.2024) Basketbol Maç Detayı - Japonya B1 Lig 2023/2024 @ Mackolik.com",
+          "oranCagrisi": 48
         }
-      ]
+      ],
+      "ms": "68-88",
+      "per": [
+        [
+          22,
+          27
+        ],
+        [
+          22,
+          17
+        ],
+        [
+          13,
+          24
+        ],
+        [
+          11,
+          20
+        ]
+      ],
+      "mbs": "3",
+      "marketler": [
+        "Maç Sonucu (Uzt. Dahil)",
+        "Handikaplı Maç Sonucu (5,5:0)",
+        "Handikaplı Maç Sonucu (6,5:0)",
+        "Handikaplı Maç Sonucu (7,5:0)",
+        "İlk Yarı/Maç Sonucu",
+        "Maç Sonucu Alt/Üst (158,5)",
+        "Maç Sonucu Alt/Üst (159,5)",
+        "Maç Sonucu Alt/Üst (160,5)",
+        "Maç Sonucu Alt/Üst (161,5)",
+        "Maç Sonucu Alt/Üst (162,5)",
+        "Maç Sonucu & Alt/Üst (160,5)",
+        "Maç Sonucu & Alt/Üst (161,5)",
+        "Uzatma Oynanır",
+        "1. Periyot Sonucu",
+        "1. Yarı Sonucu",
+        "Handikaplı 1. Yarı Sonucu (3,5:0)",
+        "Evsahibi Alt/Üst (77,5)",
+        "Deplasman Alt/Üst (83,5)"
+      ],
+      "oran": {
+        "Maç Sonucu (Uzt. Dahil)": {
+          "1": "2.70",
+          "2": "1.21"
+        },
+        "Handikaplı Maç Sonucu (5,5:0)": {
+          "1": "1.80",
+          "2": "1.56"
+        },
+        "Handikaplı Maç Sonucu (6,5:0)": {
+          "1": "1.66",
+          "2": "1.67"
+        },
+        "Handikaplı Maç Sonucu (7,5:0)": {
+          "1": "1.54",
+          "2": "1.81"
+        },
+        "İlk Yarı/Maç Sonucu": {
+          "1/1": "3.53",
+          "1/X": "27.50",
+          "1/2": "5.34",
+          "X/1": "54",
+          "X/X": "130",
+          "X/2": "28.00",
+          "2/1": "9.46",
+          "2/X": "27.00",
+          "2/2": "1.48"
+        },
+        "Maç Sonucu Alt/Üst (158,5)": {
+          "Alt": "1.87",
+          "Üst": "1.50"
+        },
+        "Maç Sonucu Alt/Üst (159,5)": {
+          "Alt": "1.81",
+          "Üst": "1.54"
+        },
+        "Maç Sonucu Alt/Üst (160,5)": {
+          "Alt": "1.70",
+          "Üst": "1.64"
+        },
+        "Maç Sonucu Alt/Üst (161,5)": {
+          "Alt": "1.65",
+          "Üst": "1.69"
+        },
+        "Maç Sonucu Alt/Üst (162,5)": {
+          "Alt": "1.55",
+          "Üst": "1.80"
+        },
+        "Maç Sonucu & Alt/Üst (160,5)": {
+          "1 ve Alt": "4.94",
+          "2 ve Alt": "2.22",
+          "1 ve Üst": "4.78",
+          "2 ve Üst": "2.15"
+        },
+        "Maç Sonucu & Alt/Üst (161,5)": {
+          "1 ve Alt": "4.81",
+          "2 ve Alt": "2.16",
+          "1 ve Üst": "4.94",
+          "2 ve Üst": "2.21"
+        },
+        "Uzatma Oynanır": {
+          "Evet": "11.40"
+        },
+        "1. Periyot Sonucu": {
+          "1": "2.15",
+          "2": "1.49",
+          "X": "13.00"
+        },
+        "1. Yarı Sonucu": {
+          "1": "2.35",
+          "2": "1.38",
+          "X": "13.00"
+        },
+        "Handikaplı 1. Yarı Sonucu (3,5:0)": {
+          "1": "1.63",
+          "2": "1.71"
+        },
+        "Evsahibi Alt/Üst (77,5)": {
+          "Alt": "1.66",
+          "Üst": "1.67"
+        },
+        "Deplasman Alt/Üst (83,5)": {
+          "Alt": "1.67",
+          "Üst": "1.67"
+        }
+      },
+      "anaAU": {
+        "cizgi": 161.5,
+        "alt": "1.65",
+        "ust": "1.69",
+        "fark": 0.040000000000000036
+      },
+      "iyAU": null,
+      "msOran": {
+        "1": "2.70",
+        "2": "1.21"
+      },
+      "handikap": {
+        "1": "1.66",
+        "2": "1.67",
+        "ad": "Handikaplı Maç Sonucu (6,5:0)",
+        "evHnd": 6.5,
+        "fark": 0.010000000000000009
+      },
+      "periyotIzi": "y', '1493114', '23170248', ['1'])\">11.40</a> </div> </div> <div style=\"clear:both\"></div> </div> </div> <div class=\"md\" style=\"border:0;width: 300px\"> <div class=\"detail-title\" style=\"width:auto\"> 1. Periyot Sonucu <span style=\"float:right\">38356&nbsp;&nbsp;<img src=\"http://im.mackolik.com/img5/iddaa/mbs3.png\"></span> </div> <div> <div style=\"float:left;min-width:50px;width:100px\"> <div class=\"sgoutcome-name\">1</div> <div class=\"sgoutcome-value\"> <a class=\"compare-rate-bg-up\" href=\"javascript:openOddsDialog('3', '1. Periyot Sonucu', ['1','X','2'], ['2.15','13.00','1.49'], '38356', 'openBmMacDetay', '1493114', '23170250', ['1','2','3'])\">2.15</a> </div> </div> <div style=\"float:left;min-width:50px;width:100px\"> <div class=\"sgoutcome-name\">X</div> <div class=\"sgoutcome-value\"> <a class=\"compare-rate-bg-up\" href=\"javascript:openOddsDialog('3', '1. Periyot Sonucu', ['1','X','2'], ['2.15','13.00','1.49'], '38356', 'openBmMacDetay', '1493114', '23170250', ['1','2','3'])\">13.00</a> </div> </div> <div style=\"float:left;min-width:50px;width:100px\"> <div class=\"sgoutcome-name\">2</div> <div class=\"sgoutcome-value\"> <a class=\"compare-rate-bg-up\" href=\"javascript:openOddsDialog('3', '1. Periyot Sonucu', ['1','X','2'], ['2.15','13.00','1.49'], '38356', 'openBmMacDetay', '1493114', '23170250', ['1','2','3'])\">1.49</a> </div> <"
     },
     {
       "aday": {
@@ -2915,24 +2628,104 @@
       },
       "deneme": [
         {
-          "yol": "/Basketbol/Mac/Default.aspx?id=",
-          "uygun": false,
-          "baslik": "Hata",
-          "oranCagrisi": 0
+          "yol": "/Basket-Mac/4065674/shiga-lakestars-veltex-shizuoka",
+          "uygun": true,
+          "baslik": "Shiga Lakestars - Veltex Shizuoka (10.02.2024) Basketbol Maç Detayı - Japonya B2 Lig 2023/2024 @ Mackolik.com",
+          "oranCagrisi": 15
         },
         {
-          "yol": "/Basket/Match/Default.aspx?id=",
-          "uygun": false,
-          "baslik": "Hata",
-          "oranCagrisi": 0
+          "yol": "/Basket-Mac/4065674",
+          "hata": "HTTP 404"
         },
         {
-          "yol": "/Match/Default.aspx?id=",
-          "uygun": false,
-          "baslik": "",
-          "oranCagrisi": 0
+          "yol": "/Basket-Mac/4065674/mac",
+          "uygun": true,
+          "baslik": "Shiga Lakestars - Veltex Shizuoka (10.02.2024) Basketbol Maç Detayı - Japonya B2 Lig 2023/2024 @ Mackolik.com",
+          "oranCagrisi": 15
         }
-      ]
+      ],
+      "ms": "100-82",
+      "per": [
+        [
+          26,
+          22
+        ],
+        [
+          21,
+          16
+        ],
+        [
+          21,
+          19
+        ],
+        [
+          32,
+          25
+        ]
+      ],
+      "mbs": "3",
+      "marketler": [
+        "Maç Sonucu (Uzt. Dahil)",
+        "Handikaplı Maç Sonucu (0:7,5)",
+        "Handikaplı Maç Sonucu (0:6,5)",
+        "Maç Sonucu Alt/Üst (167,5)",
+        "Maç Sonucu Alt/Üst (168,5)",
+        "Maç Sonucu Alt/Üst (169,5)",
+        "Uzatma Oynanır",
+        "Handikaplı 1. Yarı Sonucu (0:3,5)"
+      ],
+      "oran": {
+        "Maç Sonucu (Uzt. Dahil)": {
+          "1": "1.17",
+          "2": "2.91"
+        },
+        "Handikaplı Maç Sonucu (0:7,5)": {
+          "1": "1.73",
+          "2": "1.61"
+        },
+        "Handikaplı Maç Sonucu (0:6,5)": {
+          "1": "1.61",
+          "2": "1.73"
+        },
+        "Maç Sonucu Alt/Üst (167,5)": {
+          "Alt": "1.70",
+          "Üst": "1.63"
+        },
+        "Maç Sonucu Alt/Üst (168,5)": {
+          "Alt": "1.69",
+          "Üst": "1.65"
+        },
+        "Maç Sonucu Alt/Üst (169,5)": {
+          "Alt": "1.67",
+          "Üst": "1.67"
+        },
+        "Uzatma Oynanır": {
+          "Evet": "11.75"
+        },
+        "Handikaplı 1. Yarı Sonucu (0:3,5)": {
+          "1": "1.66",
+          "2": "1.68"
+        }
+      },
+      "anaAU": {
+        "cizgi": 169.5,
+        "alt": "1.67",
+        "ust": "1.67",
+        "fark": 0
+      },
+      "iyAU": null,
+      "msOran": {
+        "1": "1.17",
+        "2": "2.91"
+      },
+      "handikap": {
+        "1": "1.73",
+        "2": "1.61",
+        "ad": "Handikaplı Maç Sonucu (0:7,5)",
+        "evHnd": -7.5,
+        "fark": 0.11999999999999988
+      },
+      "periyotIzi": ""
     }
   ]
 }
