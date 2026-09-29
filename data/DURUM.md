@@ -2,9 +2,9 @@
 
 `█████████████████████████`  **%100**
 
-- Toplanan maç: **75.213**
+- Toplanan maç: **75.218**
 - Taranan gün: **1826 / 1826** · kalan 0 gün
-- Son güncelleme: 2026-09-29 03:35 (Türkiye saati)
+- Son güncelleme: 2026-09-29 10:07 (Türkiye saati)
 
 ## Yıllara göre
 
