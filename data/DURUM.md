@@ -4,7 +4,7 @@
 
 - Toplanan maç: **75.305**
 - Taranan gün: **1826 / 1826** · kalan 0 gün
-- Son güncelleme: 2026-10-02 18:35 (Türkiye saati)
+- Son güncelleme: 2026-10-02 19:00 (Türkiye saati)
 
 ## Yıllara göre
 
